@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <!-- Bootstrap & CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/productStyle.css">
+      <link rel="stylesheet" href="css/reset.css">
+
+      <!-- Imported Font Families -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+      <!-- Imported Material Icons -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+      <!-- Import Style for Owl Carousel -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
+
+
+
+      <title>Happy Tingkat: Product</title>
+  </head>
+
+  <body>
+    <!-- COMMON NAV BAR -->
+    <div th:insert="fragments/navbar.html :: navbar"></div>
+
+    <!-- Header Section for Product/Service Intro -->
+    <header>
+      <section class="intro-section">
+        <h1>Our Delicious Meals</h1>
+        <p>We strive to deliver a good range of healthy and nutritious home-cooked meals right to your doorstep!</p>
+        <p>Our recipes are designed together with nutritionists and health experts. We cook our meals with the finest ingredients and without MSG!</p>
+        <p>Choose from our multi-day packages now!</p>
+      </section>
+    </header>
+
+    <!-- Section 2: Our Price Plans (Owl Carousel - Desktop) -->
+    <section class="product-section">
+      <h1>
+        <span class="material-icons">storefront</span>
+        Our Tingkat Packages
+      </h1>
+      <p>*Prices are listed for lunch OR dinner packages :)</p>
+      <!-- Chinese Packages -->
+      <div class="chinese-section">
+        <legend>Chinese</legend>
+        <div id="productContainer" class="container mt-5" style="width: 1200px;">
+          <div class="owl-carousel owl-theme">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Halal Packages -->
+      <div class="halal-section">
+        <legend>Halal</legend>
+        <div class="container mt-5" style="width: 1200px;">
+          <div class="owl-carousel owl-theme">
+
+          </div>
+        </div>
+      </div>
+
+    </section> <!--End of Product Section -->
+
+    <!-- Section 3: Discount Rates -->
+    <section class="discount-section">
+      <h1>
+        <span class="material-icons">local_offer</span>
+        Our Discount Rates
+      </h1>
+
+      <table class="table table-hover table-bordered align-middle text-middle table-reponsive">
+        <!-- Table Header -->
+        <thead>
+          <tr>
+            <th></th>
+            <th>2 Pax</th>
+            <th>3 Pax (Max. Order)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table Content - Row 1 -->
+          <tr>
+            <th scope="row">1 Soup & 3 Dishes</th>
+            <td>5%</td>
+            <td>7%</td>
+          </tr>
+          <!-- Table Content - Row 2 -->
+          <tr>
+            <th scope="row">1 Soup & 4 Dishes</th>
+            <td>7%</td>
+            <td>10%</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <!-- Section 4: Catering Menu -->
+    <section class="menu-section">
+
+      <!-- Section 4a: Catering Menu Header -->
+      <div class="menu-header">
+        <h1>Our Weekly Menus</h1>
+        <p id="menuHeaderDesc">Enjoy your favourite home-cooked dishes designed each week!</p>
+        <span id="fish-icon" class="material-icons">
+          set_meal
+        </span>
+        <p class="menu-date">25 April - 29 April 2022</p>
+      </div>
+
+      <!-- Section 4b: Menu Display -->
+      <div class="catering-menu">
+
+        <div class="menu-block1">
+          <h3>
+            <span class="material-icons">menu_book</span>
+            Chinese Menu
+          </h3>
+          <div class="chinese-menu">
+            <iframe width="700" height="630" frameborder="0" scrolling="no" src="https://studenttpedu-my.sharepoint.com/personal/c2201351_student_tp_edu_sg/_layouts/15/Doc.aspx?sourcedoc={ad475b1f-45c8-4868-9a74-9b34fd42339d}&action=embedview&wdAllowInteractivity=False&Item='Sheet1'!A1%3AD6&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+          </div>
+        </div>
+
+        <div class="menu-block2">
+          <h3><span class="material-icons">menu_book</span>
+            Halal Menu
+          </h3>
+          <div class="halal-menu">
+            <iframe width="700" height="645" frameborder="0" scrolling="no" src="https://studenttpedu-my.sharepoint.com/personal/c2201351_student_tp_edu_sg/_layouts/15/Doc.aspx?sourcedoc={3e6a189c-c1e7-458d-9772-2c89bafa69ea}&action=embedview&wdAllowInteractivity=False&Item='Sheet1'!A1%3AD6&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modal for Each Tingkat Package -->
+    <div class="modal fade" id="packageModal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title" id="packageTitle">XXXXXXXXXX</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="packageImage" src="http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif" class="card-img-top" alt="Package Item Image">
+            <hr>
+            <p>Description: <span id="description">XXXXXXXXXXXX</span></p>
+            <p>Cuisine: <span id="packageCuisine">XXXXXXXXXXXX</span></p>
+            <p>Today's Menu: </p>
+            <p>Price: <span id="packagePrice">XXXXXXXXXXXX</span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Order now!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMMON FOOTER -->
+    <div th:insert="fragments/footer.html :: footer"></div>
+
+    <!-- COMMON SCRIPTS -->
+    <div th:insert="fragments/commonScripts.html :: commonScripts"></div>
+
+    <!-- PAGE-SPECIFIC SCRIPTS -->
+    <script src="JS/packageController.js"></script>
+    <script src="JS/displayPackage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="JS/carouseleffects.js"></script>
+
+
+  
+  </body>
+</html>

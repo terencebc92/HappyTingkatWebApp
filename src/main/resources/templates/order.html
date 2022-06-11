@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- COMMON STYLES -->
+    <div th:replace="fragments/commonStyles.html :: commonStyles"></div>
+
+    <!-- PAGE-SPECIFIC STYLES -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+    <link rel="stylesheet" href="css/orderStyle.css" />
+
+    <title>Order</title>
+
+  </head>
+  <body>
+
+    <!-- COMMON NAV BAR -->
+    <div th:insert="fragments/navbar.html :: navbar"></div>
+
+
+
+    <div class="container mb-5 my-sm-1">
+      <!-- Order now header -->
+      <div class="text-center page__header">
+        <h1>ORDER NOW</h1>
+      </div>
+
+      <!-- Row with 2 columns; Image on the left; Form on the right -->
+      <div class="row">
+        <!-- This col is for the images. -->
+        <div class="col-lg-6 col-12">
+          <div class="row">
+            <div class="col mb-3 ">
+              <img
+                class="img-fluid main-image"
+                src="Projectimages/chinese4dish1-min.jpeg"
+              />
+            </div>
+          </div>
+
+          <!-- carousel -->
+          <div class="container text-center my-3" >
+            <div class="row mx-auto my-auto justify-content-center" >
+                <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" >
+                    <div class="carousel-inner" role="listbox" id="carouselSection">
+                        <div class="carousel-item active">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="Projectimages/chinese4dish1-min.jpeg" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="Projectimages/chinese4dish2-min.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="Projectimages/chinese4dish3-min.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="Projectimages/chinesefood3-min.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="Projectimages/chinesefood1-min.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="Projectimages/chinesefood2-min.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+        <!-- this closes the Images col -->
+
+        <!-- This col is for the Form -->
+        <!-- Meal package -->
+        <div class="col-12 col-md-3 ms-lg-5 mt-5 mt-lg-0 mb-5 form__body">
+          <form id="orderFormId" onsubmit="event.preventDefault(); submitOrder()">
+            <div class="mb-3">
+              <label for="mealPackage" class="form-label">Meal Package*:</label>
+              <select
+                name="mealPackage"
+                id="mealPackage"
+                class="form-select form__select form__item"
+                aria-label="Default select example"
+                required
+              >
+                <option selected>Choose one</option>
+                <option value="10">10 days</option>
+                <option value="20">20 days</option>
+                <option value="30">30 days</option>
+              </select>
+            </div>
+            <!-- For checkbox & radiobutton we need to use JavaScript to validate that at least one option is selected -->
+            <!-- Lunch/Dinner -->
+            <div>
+              <label>Lunch/Dinner*: </label>
+            </div>
+            <div class="mb-3">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input form__input__check"
+                  type="checkbox"
+                  name="checkboxLunch"
+                  id="checkboxLunch"
+                  value="lunch"
+                />
+                <label class="form-check-label" for="checkboxLunch"> Lunch </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input form__input__check form__item"
+                  type="checkbox"
+                  name="checkboxDinner"
+                  id="checkboxDinner"
+                  value="dinner"
+                />
+                <label class="form-check-label" for="checkboxDinner"> Dinner </label>
+              </div>
+            </div>
+            <!-- Meal Delivery Start -->
+            <div class="mb-3">
+              <label for="deliveryStart" class="mb-1"
+                >Meal Delivery Start*:</label
+              >
+              <br />
+              <input type="date" name="deliveryStart" id="deliveryStart" class="form__input__date form__item"/>
+            </div>
+            <!-- Number of persons - Slider. -->
+            <div class="mb-3">
+              <label for="numPax" class="form-label"
+                >Number of persons (max 3 per delivery):</label
+              >
+              <div class="form__slider__value">1</div>
+              <input
+                type="range"
+                class="form-range form__input__range form__item"
+                min="1"
+                max="3"
+                id="numPax"
+                name="numPax"
+                value="1"
+              />
+            </div>
+            <!-- Meal Options -->
+            <div class="mb-3">
+              <label for="numDishes" class="form-label">Meal options*:</label>
+              <select
+                name="numDishes"
+                id="numDishes"
+                class="form-select form__select form__item"
+                aria-label="Default select example"
+                required
+              >
+                <option selected>Choose one</option>
+                <option value="3">1 Soup + 3 Dishes</option>
+                <option value="4">1 Soup + 4 Dishes</option>
+              </select>
+            </div>
+            <!-- Add-Ons: White rice/Brown rice -->
+            <div class="row mb-3">
+              <label>Add-Ons <span class="optional">(optional)</span>:</label><br />
+              <div class="col-4 col-md-4">
+                <label for="whiteRice">White rice</label>
+                <br />
+                <input
+                  type="number"
+                  name="whiteRice"
+                  id="whiteRice"
+                  min="0"
+                  max="5"
+                  step="1"
+                  class="form__input__number form__item"
+                />
+              </div>
+              <div class="col-4 col-md-4">
+                <label for="brownRice">Brown rice</label>
+                <br />
+                <input
+                  type="number"
+                  name="brownRice"
+                  id="brownRice"
+                  min="0"
+                  max="5"
+                  step="1"
+                  class="form__input__number form__item"
+                />
+              </div>
+            </div>
+            <!-- Name -->
+            <div class="my-3">
+              <label for="name">Name*:</label>
+              <input
+                type="text"
+                class="form-control form__input__text form__item"
+                placeholder="Name"
+                aria-label="Name"
+                name="name"
+                id="name"
+                required
+              />
+            </div>
+            <!-- Email -->
+            <div class="my-3">
+              <label for="email" class="form-label">Email*:</label>
+              <input
+                type="email"
+                class="form-control form__input__text form__item"
+                id="email"
+                placeholder="name@example.com"
+                name="email"
+                required
+              />
+            </div>
+            <!-- Mobile -->
+            <div class="my-3">
+              <label for="mobile">Mobile*:</label>
+              <input
+                type="text"
+                class="form-control form__input__text form__item"
+                placeholder="Mobile"
+                aria-label="Mobile"
+                name="mobile"
+                id="mobile"
+                required
+              />
+            </div>
+
+            <div class="fw-bold form__price">Price Total: $100.00</div>
+
+            <div class="mt-3 d-grid gap-2">
+              <button type="submit" class="btn btn-primary fw-bold orderButton">
+                ORDER NOW
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- This closes the Form col. -->
+      </div>
+      <!-- This closes the row with 2 columns; Image on the left; Form on the right. -->
+    </div>
+    <!-- This closes the container. -->
+
+
+      <!-- COMMON FOOTER -->
+      <div th:insert="fragments/footer.html :: footer"></div>
+
+      <!-- COMMON SCRIPTS -->
+      <div th:insert="fragments/commonScripts.html :: commonScripts"></div>
+
+      <!-- PAGE-SPECIFIC SCRIPTS -->
+      <script src="JS/order.js"></script>
+
+  </body>
+</html>

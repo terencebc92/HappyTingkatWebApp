@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- COMMON STYLES -->
+    <div th:replace="fragments/commonStyles.html :: commonStyles"></div>
+
+    <!-- PAGE-SPECIFIC STYLES -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="css/adminStyle.css" />
+    
+    <title>Admin</title>
+  </head>
+  <body>
+
+    <!-- COMMON NAV BAR -->
+    <div th:insert="fragments/navbar.html :: navbar"></div>
+
+    <!-- Main header  -->
+    <div class="container my-5 page__header">
+      <h1 class="text-center">Orders</h1>
+    </div>
+
+    <!-- Custom form for user filter -->
+
+    <div class="container d-md-flex justify-content-between align-items-end form__body">
+      <div class="my-2">
+        <label for="showEntries">Show</label>
+        <select
+          class="form-select form__select__entries d-inline-block"
+          name="showEntries"
+          id="showEntries"
+        >
+          <option selected></option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+        </select>
+        <span>entries</span>
+      </div>
+
+      <div>
+        <div class="d-inline">Filter by:</div>
+
+        <div class="my-2 d-md-inline-flex">
+          <input class="form__date" type="date" id="dateFilter" />
+        </div>
+        <div class="my-2 d-md-inline-flex">
+          <input
+            class="form__search"
+            type="text"
+            id="searchFilter"
+            placeholder="Keyword search"
+          />
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- Desktop table -->
+    <div class="container desktop table-responsive footer__content__wrap">
+      <table class="table table-borderless align-middle text-center">
+        <!-- Table headers -->
+        <thead>
+          <tr class="text-center align-middle">
+            <th scope="col">Order<br />no.</th>
+            <th scope="col">Date</th>
+            <th scope="col">Meal<br />Package <br />(days)</th>
+            <th scope="col">Lunch/<br />Dinner</th>
+            <th scope="col">Delivery<br />Start Date</th>
+            <th scope="col">Pax</th>
+            <th scope="col">Meal<br />options<br />(dishes)</th>
+            <th scope="col">Add-on:<br />White<br />rice</th>
+            <th scope="col">Add-on:<br />Brown<br />rice</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Total<br />($)</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+
+        <!-- Table body - desktop -->
+        <tbody>
+
+          <!-- tbody content is generated dynamically -->
+
+        </tbody>
+      </table>
+    </div>
+    <!-- End of desktop table -->
+
+    <!-- Mobile table-->
+    <div class="container mobile footer__content__wrap" id="collapseRowsAll">
+      <div class="table-responsive col-md-12 mb-5">
+        <table class="table table-borderless align-middle">
+          <thead>
+            <tr class="align-middle">
+              <th scope="col">
+                Order <br />
+                no.
+              </th>
+              <th scope="col">Date</th>
+              <th scope="col">Name</th>
+              <th scope="col">Total ($)</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <!-- tbody content is generated dynamically -->
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- End of mobile table-->
+
+
+    <!-- COMMON FOOTER -->
+    <div th:insert="fragments/footer.html :: footer"></div>
+
+    <!-- COMMON SCRIPTS -->
+    <div th:insert="fragments/commonScripts.html :: commonScripts"></div>
+
+    <!-- PAGE-SPECIFIC SCRIPTS -->
+    <script src="js/orderController.js"></script>
+    <script src="js/displayOrder.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,94 @@
+h1 { font-size: 34px; }
+h2 { font-size: 32px; }
+h3 { font-size: 26px; }
+h4 { font-size: 22px; }
+h5 { font-size: 20px; }
+
+
+.navbar .nav-link {
+    font-size: 16px;
+    font-weight: 500; 
+    text-transform: uppercase;
+    padding-left: 1rem !important; /*1rem is 16 px, impt makes it take effect over other styles*/
+    padding-right: 1rem !important; 
+}
+
+.carousel-item {
+    height: 450px;
+}
+
+.carousel-image-1 {
+background: url('../Projectimages/carouselimage1resized.jpg');
+background-size: cover;
+}
+
+.carousel-image-2 {
+background: url('../Projectimages/carouselimage2.jpg');
+background-size: cover;
+}
+
+.carousel-image-3 {
+background: url('../Projectimages/carouselimage3resized.jpg');
+background-size: cover;
+}
+
+#home-icons {
+    margin: 0;
+    padding: 0;
+}
+
+.col-12 h2 {
+    font-size: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+#divider {
+    position: relative;
+    min-height: 200px;
+    background: url('../Projectimages/foodbanner6.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #302718;
+}
+
+#be-member {
+    background-color: #699e3c;
+}
+
+.fab {
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#faq .card {
+    border: #444;
+}
+
+#faq {
+    background-color: #ded2a8
+}
+
+#faq a {
+    color: #302718;
+    text-decoration: none;
+}
+
+#faq .card-body,
+#faq .card-header {
+    background: #ffffff;
+    color: #302718;
+}
+
+#gallery {
+    background: #ffffff;
+    color: #302718;
+}
+
+#main-footer {
+    background: #ffffff;
+    color: #302718;
+}

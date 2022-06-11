@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<nav th:fragment="navbar" class="navbar navbar-expand-sm navbar-dark" style="background-color: #699e3c;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">T.Logo</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Catering Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Order Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Form</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-success">YOUR CART</button>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
