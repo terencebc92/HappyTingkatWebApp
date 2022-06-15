@@ -64,47 +64,32 @@ h1 {
   'opsz' 48
 }
 
-
-
 /* Header Section Style */
-header {
-    display: flex;
-    background-image: url(../Projectimages/headerpic-resize-min.png);
+
+.masthead {
     background-size: cover;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-wrap: wrap;
+    min-height: 90vh;
+    position: relative;
     color: #ffffff;
-    width: 100%;
-    height: 700px;
-    background-repeat: no-repeat;
+    text-shadow: 2px 2px 2px rgba(0,0,.2);
 }
 
-header h1 {
-    margin-top: 25px;
-    padding-top: 25px;
+.masthead h1 {
+    font-size: 2.3rem;
+    margin-top: 10%;
 }
 
-.intro-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 150px;
-    max-width: 800px;
-    min-height: 320px;
-    /* overflow: hidden; */
-    /* margin-bottom: 35px; */
-}
-
-.intro-section h1 {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.intro-section p {
-    font-size: 17px;
-    padding: 5px;
+.masthead p {
+    font-size: 1.1rem;
     margin-top: 10px;
+    padding-top: 10px;
+    width: 65%;
+}
+
+.color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 /* Section 2: Product Packages Style - Owl Carousel (>1024px) */
@@ -113,8 +98,9 @@ header h1 {
     display: block;
     height: auto;
     background-color: #DED2A8;
-    padding-top: 35px;
+    padding-top: 55px;
 }
+
 
 .product-section legend {
     width: 50%;
@@ -135,13 +121,8 @@ header h1 {
     width: 350px;
     height: 350px;
     border-radius: 10px;
-    /* margin-left: auto;
-    margin-right: auto; */
+    border-color: #DED2A8;
 }
-
-/* .image-box {
-    position: relative;
-} */
 
 .img-container {
     position: relative;
@@ -190,14 +171,6 @@ header h1 {
     align-items: center;
 }
 
-/* .info-right {
-    display: flex;
-    width: 30%;
-    justify-content: center;
-    align-items: center;
-    border-left: 1px solid gray;
-} */
-
 #orderButton a {
     display: flex;
     border: 1px solid darkgreen;
@@ -232,7 +205,7 @@ header h1 {
 }
 
 .owl-next {
-    right: -35px;
+    right: -15px;
 }
 
 .owl-prev, .owl-next {
@@ -243,10 +216,6 @@ header h1 {
 .owl-prev span, .owl-next span {
     font-size: 50px;
     color: black;
-}
-
-.owl-prev span:hover, .owl-next span:hover {
-    background-color: #699e3c;
 }
 
 .owl-theme, .owl-nav[class*="owl-"]:hover {
@@ -319,9 +288,9 @@ header h1 {
     color: #000000;
 }
 
-.menu-header h1, p {
+/* .menu-header h1, p {
     padding-bottom: 10px;
-}
+} */
 
 .menu-date {
     font-size: 20px;
@@ -334,23 +303,9 @@ header h1 {
 
 /* Section 4b: Menu Display Style */
 .catering-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    margin-top: 25px;
     width: 100%;
     color: #000000;
-}
-
-.menu-block1, .menu-block2 {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 25px;
-}
-
-.menu-block2 {
-    margin-top: 15px;
 }
 
 .menu-section h3 {
@@ -374,20 +329,6 @@ header h1 {
 
 /* RWD for laptop resolution (< 1280px) */
 @media only screen and (max-width: 1280px) {
-    /* Header Section */
-    header {
-        height: 500px;
-    }
-
-    .intro-section {
-        width: 55%;
-        margin-top: 135px;
-        margin-bottom: auto;
-    }
-
-    .intro-section p {
-        font-size: 0.95rem;
-    }
 
     .carousel-container {
         margin-top: auto;
@@ -397,37 +338,22 @@ header h1 {
         margin-top: -50px;
     }
 
-    .catering-menu {
-        display: flex;
-        flex-direction: column;
-        margin: 10px 0px;
-    }
+}
 
-    .menu-block2 {
-        padding-top: 25px;
+/* RWD (1024px > & < 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .product-section .card {
+        width: 300px;
+        height: 300px;
     }
 }
 
 /* Mobile Resolution for Owl Carousel (< 1024px)*/
 
-@media screen and (max-width: 1024px) {
-
-    /* .product-section .chinese-section, .product-section .halal-section {
-        display: none;
-    } */
+@media only screen and (max-width: 1024px) {
 
     h1 {
         font-size: 27px;
-    }
-
-    .intro-section p {
-        font-size: 0.95rem;
-        margin-top: 5px;
-    }
-
-    .intro-section h1 {
-        /* font-size: 27px; */
-        margin-top: -5px;
     }
 
     .product-section h1 {
@@ -435,7 +361,6 @@ header h1 {
     }
 
     .product-section p {
-        /* margin-bottom: 10px; */
         padding-bottom: 20px;
     }
 
@@ -467,8 +392,6 @@ header h1 {
     }
 
     .product-section img {
-        /* width: 100%;
-        height: 100%; */
         object-fit: cover;
     }
 
@@ -476,33 +399,24 @@ header h1 {
         display: flex;
         opacity: 0.8;
         color: black;
-        /* z-index: 999; */
     }
-    
+
     .info-left {
         display: flex;
         flex-direction: column;
         width: 70%;
         height: auto;
         justify-content: center;
-        /* padding-top: 20px; */
     }
-    
+
     .owl-prev {
         left: 7px;
     }
-    
+
     .owl-next {
         right: 7px;
     }
 
-    /* #mobileButton a {
-        display: flex;
-        border: 1px solid darkgreen;
-        justify-content: center;
-        align-items: center;
-    } */
-    
     .info h5, p {
         font-weight: bold;
     }
@@ -513,5 +427,42 @@ header h1 {
 
     .discount-section h1 {
         font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .masthead {
+        min-height: 60vh;
+    }
+
+    .masthead h1, .product-section h1, discount-section h1, menu-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .masthead p {
+        padding-top: 2.5px;
+        font-size: 0.85rem;
+        width: 70%;
+    }
+
+    .owl-prev {
+        left: -30px;
+    }
+
+    .owl-next {
+        right: -30px;
+    }
+
+    .product-section .card {
+        width: 350px;
+        height: 350px;
+    }
+
+    .owl-prev {
+        left: 10px;
+    }
+
+    .owl-next {
+        right: 10px;
     }
 }
