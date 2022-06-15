@@ -1,18 +1,50 @@
-/* Universal Style*/
+:root {
+  --brown: #302718;
+  --darkgold: #c7ab59;
+  --lightgold: #ded2a8;
+  --green: #699e3c;
+}
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 { font-size: 34px; }
+h2 { font-size: 32px; }
+h3 { font-size: 26px; }
+h4 { font-size: 22px; }
+h5 { font-size: 20px; }
+
+
+/* Navigation Bar Style */
+nav {
+  width: 100%;
+}
+
+.navbar .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 1rem !important; /*1rem is 16 px, impt makes it take effect over other styles*/
+  padding-right: 1rem !important;
+}
+
+.navbar .nav-link.active {
+  background-color: #38891b;
+  border-radius: 5px;
+}
+
+.nav-item a {
+  color: black;
+}
+
+.footer {
+    font-weight: 400;
 }
 
 body {
     font-family: 'Inter', sans-serif;
 }
-
-h1 {font-size: 34px}
-h2 {font-size: 32px}
-h3 {font-size: 26px}
-h4 {font-size: 22px}
-h5 {font-size: 20px}
 
 img {
     opacity: 0.9;
@@ -32,27 +64,7 @@ h1 {
   'opsz' 48
 }
 
-/* Navigation Bar Style */
-nav {
-    width: 100%;
-}
 
-.navbar .nav-link {
-    font-size: 16px;
-    font-weight: 500; 
-    text-transform: uppercase;
-    padding-left: 1rem !important; /*1rem is 16 px, impt makes it take effect over other styles*/
-    padding-right: 1rem !important; 
-}
-
-.navbar .nav-link.active {
-    background-color: #38891b;
-    border-radius: 5px;
-}
-
-.nav-item a {
-    color: black;
-}
 
 /* Header Section Style */
 header {

@@ -8,26 +8,27 @@
 
 <nav th:fragment="navbar" class="navbar navbar-expand-sm navbar-dark" style="background-color: #699e3c;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">T.Logo</a>
+        <a class="navbar-brand" th:classappend="${#httpServletRequest.getRequestURI() == '/index' ? 'active':''}" aria-current="page" th:href="@{index}">T.Logo</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/index' ? 'active':''}" aria-current="page" th:href="@{index}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/aboutus' ? 'active':''}" th:href="@{aboutus}">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/product' ? 'active':''}" th:href="@{product}">Catering Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Catering Menu</a>
+                    <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/order' ? 'active':''}" th:href="@{order}">Order Now</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Order Now</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Form</a>
+                    <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/admin' ? 'active':''}" th:href="@{admin}">Admin</a>
                 </li>
             </ul>
             <button type="button" class="btn btn-success">YOUR CART</button>
