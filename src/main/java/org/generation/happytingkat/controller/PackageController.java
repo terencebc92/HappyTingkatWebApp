@@ -3,10 +3,7 @@ package org.generation.happytingkat.controller;
 import org.generation.happytingkat.repository.entity.Package;
 import org.generation.happytingkat.service.PackageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,9 +20,23 @@ public class PackageController {
 
     @CrossOrigin
     @GetMapping("/all")
-    public List<Package> getPackages()
+    public Iterable<Package> getPackages()
     {
         return packageService.all();
+    }
+
+    @CrossOrigin
+    @GetMapping("{id}")
+    public Package findPackageById(@PathVariable Integer id)
+    {
+        return packageService.findById(id);
+    }
+
+    @CrossOrigin
+    @DeleteMapping("/{id}")
+    public void delete (@PathVariable Integer id)
+    {
+        packageService.delete(id);
     }
 
 }
