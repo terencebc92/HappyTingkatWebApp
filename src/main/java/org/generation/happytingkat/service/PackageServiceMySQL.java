@@ -11,7 +11,8 @@ import java.util.*;
 public class PackageServiceMySQL implements PackageService {
 
     private final PackageRepository packageRepository;
-    public PackageServiceMySQL(@Autowired PackageRepository packageRepository) {
+    public PackageServiceMySQL(@Autowired PackageRepository packageRepository)
+    {
         this.packageRepository = packageRepository;
     }
 
@@ -32,5 +33,4 @@ public class PackageServiceMySQL implements PackageService {
     public Package findById(int packageId) {
         return null;
     }
-
 }
