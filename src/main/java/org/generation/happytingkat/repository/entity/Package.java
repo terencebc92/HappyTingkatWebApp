@@ -23,7 +23,8 @@ public class Package {
     public Package() {}
 
     //This constructor is the one you use to create instances of Item to be saved to the database
-    public Package(PackageDto packageDto) {
+    public Package(PackageDto packageDto)
+    {
         this.name = packageDto.getName();
         this.price = packageDto.getPrice();
         this.type = packageDto.getType();
