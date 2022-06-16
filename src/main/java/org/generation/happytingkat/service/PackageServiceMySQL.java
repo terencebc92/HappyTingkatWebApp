@@ -1,6 +1,7 @@
 package org.generation.happytingkat.service;
 
 import org.generation.happytingkat.repository.PackageRepository;
+import org.generation.happytingkat.repository.entity.Customers;
 import org.generation.happytingkat.repository.entity.Package;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,8 @@ public class PackageServiceMySQL implements PackageService {
 
     @Override
     public Package findById(int packageId) {
-        return null;
+        Optional<Package> aPackage = packageRepository.findById(packageId);   //Cannot be a null
+        Package packageResponse = aPackage.get();
+        return packageResponse;
     }
 }
