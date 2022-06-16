@@ -1,5 +1,9 @@
 package org.generation.happytingkat.repository.entity;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import javax.persistence.Entity;
+
+@Entity
 public class Package {
 
     private Integer id;
