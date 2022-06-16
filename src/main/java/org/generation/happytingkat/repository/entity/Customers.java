@@ -1,10 +1,17 @@
 package org.generation.happytingkat.repository.entity;
 
+import org.generation.happytingkat.controller.dto.CustomersDto;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Customers {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
@@ -17,6 +24,14 @@ public class Customers {
 
     public Customers() {
 
+    }
+
+    public Customers(CustomersDto customersDto)
+    {
+        this.name = customersDto.getName();
+        this.phone_number = customersDto.getPhone_number();
+        this.email_address = customersDto.getEmail_address();
+        this.delivery_address = customersDto.getDelivery_address();
     }
 
     public Integer getId() {
