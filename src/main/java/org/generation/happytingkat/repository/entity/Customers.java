@@ -1,5 +1,8 @@
 package org.generation.happytingkat.repository.entity;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Customers {
 
     private Integer id;
