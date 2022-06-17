@@ -1,9 +1,10 @@
 // Defining Class Object for Products:
 
-class PackagesController { 
+class PackagesController {
     constructor(currentId = 0) {
         this.allPackageItems = [];
         this.currentId = currentId;
+        this.allPackageAPI = "http://localhost:8080/package/all";
     }
 
     // Package Methods:
@@ -21,10 +22,44 @@ class PackagesController {
         this.allPackageItems.push(packageItem);
     }
 
-    displayPackage() {
+    displayPackage()
+        {
+            let packageController = this;
+            packageController._package = [];
+
+            //fetch data from database using the REST API endpoint from Spring Boot
+            fetch(this.allPackageAPI)
+                .then((resp) => resp.json())
+                .then(function(data) {
+                    console.log("2. receive data")
+                    console.log(data);
+                    data.forEach(function (apackage, index) {
+
+                        const packageObj = {
+                            id: index,
+                            name: apackage.name,
+                            price: apackage.price,
+                            type: apackage.type,
+                            imageUrl: apackage.imageUrl,
+                            cuisine: apackage.cuisine,
+                            description: apackage.description,
+                       };
+                        packageController.allPackageItems.push(packageObj);
+                  });
+
+                  packageController.renderPackagePage();
+
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+        }
+
+    renderPackagePage() {
+        console.log("This is the start of render package page.")
         let showPackageChinese = "";
         let showPackageHalal = "";
-
+        console.log(this.allPackageItems);
         this.allPackageItems.forEach ((item) => {
           let infoBtnId = item.id;
           let htmlPackageCard =
@@ -32,7 +67,7 @@ class PackagesController {
           <div class="ms-2 me-2">
             <div class="card">
               <div class="img-container">
-                <img src="${item.imageURL}" class="card-img-top">
+                <img src="${item.imageUrl}" class="card-img-top">
                 <button type="button" id="${infoBtnId}" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#packageModal"><span class="material-icons">info_outline</span>
                 </button>
               </div>
@@ -50,10 +85,10 @@ class PackagesController {
             </div>
           </div>
           `
-         
+
           if (item.cuisine == "Chinese") {
             showPackageChinese += htmlPackageCard
-          } 
+          }
           else if (item.cuisine == "Halal") {
             showPackageHalal += htmlPackageCard
           }
@@ -68,7 +103,7 @@ class PackagesController {
 
         // Add eventListener for each modal 'Info' button:
         this.allPackageItems.forEach ((item) => {
-          let infoBtnId = item.id 
+          let infoBtnId = item.id
           document.getElementById(infoBtnId).addEventListener("click", function() {
             displayPackageDetail(item)
           });
@@ -85,3 +120,4 @@ function displayPackageDetail(item) {
     document.querySelector("#packageCuisine").innerHTML = item.cuisine;
     document.querySelector("#packagePrice").innerHTML = item.price;
 }
+

@@ -1,7 +1,16 @@
 package org.generation.happytingkat.repository.entity;
 
+import org.generation.happytingkat.controller.dto.PackageDto;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Package {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private double price;
@@ -10,7 +19,19 @@ public class Package {
     private String cuisine;
     private String description;
 
+    //default constructor only exists for the sake of JPA; we do not use it directly
     public Package() {}
+
+    //This constructor is the one you use to create instances of Item to be saved to the database
+    public Package(PackageDto packageDto)
+    {
+        this.name = packageDto.getName();
+        this.price = packageDto.getPrice();
+        this.type = packageDto.getType();
+        this.imageUrl = packageDto.getImageUrl();
+        this.cuisine = packageDto.getCuisine();
+        this.description = packageDto.getDescription();
+    }
 
     public Integer getId() {
         return id;

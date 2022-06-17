@@ -1,7 +1,9 @@
 package org.generation.happytingkat.repository;
 
-public interface CustomersRepository {
+import org.generation.happytingkat.repository.entity.Customers;
+import org.springframework.data.repository.CrudRepository;
 
+public interface CustomersRepository extends CrudRepository<Customers, Integer> {
 
 
 }
