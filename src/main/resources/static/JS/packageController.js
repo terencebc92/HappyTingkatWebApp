@@ -32,6 +32,38 @@ class PackagesController {
                   }); //end of forEach
 
                   packageController.renderPackagePage();
+
+                  $(".owl-carousel").owlCarousel({
+                            loop: true,
+                            animateIn: 'flipInY',
+                            animateOut: 'zoomOutDown',
+                            responsiveRefreshRate: 100,
+                            responsiveClass: true,
+                            responsive: {
+                                0: {
+                                    items: 1,
+                                    dots: false,
+                                    nav: true,
+                                    animateIn: 'flipInY',
+                                    animateOut: 'zoomOutDown'
+                                },
+                                768: {
+                                    items: 1,
+                                    dots: true,
+                                    nav: true,
+                                    animateIn: 'flipInY',
+                                    animateOut: 'zoomOutDown',
+                                },
+                                1025: {
+                                    items: 3,
+                                    dots: true,
+                                    nav: true,
+                                    slideBy: 3
+                                }
+                            }
+                        });
+
+
                 })
                 .catch(function(error) {
                     console.log(error);
@@ -97,9 +129,9 @@ class PackagesController {
 
 // This function handles each 'info' button to show the Product Details in a modal popup
 function displayPackageDetail(item) {
-    document.querySelector("#packageTitle").innerHTML = item.packageName;
+    document.querySelector("#packageTitle").innerHTML = item.name;
     document.querySelector("#description").innerHTML = item.description;
-    document.querySelector("#packageImage").src = item.imageURL;
+    document.querySelector("#packageImage").src = item.imageUrl;
     document.querySelector("#packageCuisine").innerHTML = item.cuisine;
     document.querySelector("#packagePrice").innerHTML = item.price;
 }

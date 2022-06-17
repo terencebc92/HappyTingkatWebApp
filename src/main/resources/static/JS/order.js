@@ -92,6 +92,7 @@ checkboxes.forEach((checkbox) => {
 });
 
 function handleChecked(event) {
+
   if (event.target.checked) {
     lunchOrDinner.push(event.target.value);
     if(event.target.value == "lunch") {
