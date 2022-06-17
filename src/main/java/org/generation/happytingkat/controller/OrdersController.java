@@ -1,5 +1,15 @@
 package org.generation.happytingkat.controller;
 
+import org.generation.happytingkat.controller.dto.OrdersDto;
+import org.generation.happytingkat.repository.entity.Orders;
+import org.generation.happytingkat.service.OrdersService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
+
+@RestController
+@RequestMapping("/orders")
 public class OrdersController {
 
     final OrdersService ordersService;

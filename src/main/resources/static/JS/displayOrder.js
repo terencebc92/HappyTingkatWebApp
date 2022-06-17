@@ -1,1 +1,2 @@
-console.log("This is displayOrder.js")
+const ordersController = new OrdersController();
+ordersController.displayOrder();
