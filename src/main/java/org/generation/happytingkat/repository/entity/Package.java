@@ -33,6 +33,10 @@ public class Package {
         this.description = packageDto.getDescription();
     }
 
+    public Integer getId() {
+        return id;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }

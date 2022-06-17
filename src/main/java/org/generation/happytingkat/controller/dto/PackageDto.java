@@ -2,7 +2,6 @@ package org.generation.happytingkat.controller.dto;
 
 public class PackageDto {
 
-    private Integer id;
     private String name;
     private double price;
     private String type;
@@ -11,21 +10,12 @@ public class PackageDto {
     private String description;
 
     public PackageDto(Integer id, String name, double price, String type, String imageUrl, String cuisine, String description) {
-        this.id = id;
         this.name = name;
         this.price = price;
         this.type = type;
         this.imageUrl = imageUrl;
         this.cuisine = cuisine;
         this.description = description;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {
