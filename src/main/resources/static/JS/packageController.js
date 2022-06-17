@@ -1,26 +1,11 @@
 // Defining Class Object for Products:
 
 class PackagesController {
-    constructor(currentId = 0) {
+    constructor() {
         this.allPackageItems = [];
-        this.currentId = currentId;
         this.allPackageAPI = "http://localhost:8080/package/all";
     }
 
-    // Package Methods:
-    addPackage(packageName, packageType, description, imageURL, cuisine, price) {
-
-        const packageItem = {
-            id: this.currentId++,
-            packageName: packageName,
-            packageType: packageType,
-            description: description,
-            imageURL: imageURL,
-            cuisine: cuisine,
-            price: price
-        }
-        this.allPackageItems.push(packageItem);
-    }
 
     displayPackage()
         {
@@ -33,10 +18,9 @@ class PackagesController {
                 .then(function(data) {
                     console.log("2. receive data")
                     console.log(data);
-                    data.forEach(function (apackage, index) {
-
+                    data.forEach(function (apackage) {
                         const packageObj = {
-                            id: index,
+                            id: apackage.id,
                             name: apackage.name,
                             price: apackage.price,
                             type: apackage.type,
@@ -45,10 +29,9 @@ class PackagesController {
                             description: apackage.description,
                        };
                         packageController.allPackageItems.push(packageObj);
-                  });
+                  }); //end of forEach
 
                   packageController.renderPackagePage();
-
                 })
                 .catch(function(error) {
                     console.log(error);
@@ -63,27 +46,27 @@ class PackagesController {
         this.allPackageItems.forEach ((item) => {
           let infoBtnId = item.id;
           let htmlPackageCard =
-          `
-          <div class="ms-2 me-2">
-            <div class="card">
-              <div class="img-container">
-                <img src="${item.imageUrl}" class="card-img-top">
-                <button type="button" id="${infoBtnId}" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#packageModal"><span class="material-icons">info_outline</span>
-                </button>
-              </div>
-              <div class="card-body">
-                <div class="info">
-                  <div class="info-left">
-                    <h5 class="card-title">${item.packageName}</h5>
-                    <p class="card-text">${item.packageType}</p>
+              `
+              <div class="ms-2 me-2">
+                <div class="card">
+                  <div class="img-container">
+                    <img src="${item.imageUrl}" class="card-img-top">
+                    <button type="button" id="${infoBtnId}" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#packageModal"><span class="material-icons">info_outline</span>
+                    </button>
                   </div>
-                  <div id="orderButton">
-                    <a href="#" class="btn btn-lg btn-success"><h5>${item.price}</h5></a>
+                  <div class="card-body">
+                    <div class="info">
+                      <div class="info-left">
+                        <h5 class="card-title">${item.name}</h5>
+                        <p class="card-text">${item.type}</p>
+                      </div>
+                      <div id="orderButton">
+                        <a href="#" class="btn btn-lg btn-success"><h5>${item.price}</h5></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
           `
 
           if (item.cuisine == "Chinese") {

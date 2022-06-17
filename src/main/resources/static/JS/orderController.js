@@ -220,6 +220,3 @@ class OrdersController {
 
 } // End of OrdersController Class
 
-
-const ordersController = new OrdersController();
-ordersController.displayOrder();
