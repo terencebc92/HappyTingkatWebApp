@@ -1,6 +1,73 @@
+// Instantiate an OrdersController object
+const ordersControl = new OrdersController();
+
+
+// Add a function to the form that runs when the submit button is pressed
+orderFormId.addEventListener('submit', (event) => {
+    // Stop form default action
+    event.preventDefault();
+
+    // Get the current time in "YYYY-MM-DD hh:mm:ss"
+    const currentTime = new Date().getTime();
+    const toyear = new Date(currentTime).getFullYear();
+    let tomonth = new Date(currentTime).getMonth();
+    let todate = new Date(currentTime).getDate();
+    let tohour = new Date(currentTime).getHours();
+    let tominute = new Date(currentTime).getMinutes();
+    let tosecond = new Date(currentTime).getSeconds();
+
+    todate = todate < 10 ? "0" + todate : todate;
+    tomonth = tomonth + 1 < 10 ? "0" + (tomonth + 1): tomonth + 1;
+    tohour = tohour < 10 ? "0" + tohour : tohour;
+    tominute = tominute < 10 ? "0" + tominute : tominute;
+    tosecond = tosecond < 10 ? "0" + tosecond : tosecond;
+
+    const order_time = toyear + "-" + tomonth + "-" + todate + " " + tohour + ":" + tominute + ":" + tosecond;
+
+    // Validate lunch or dinner checkboxes
+    if (lunchOrDinner.length == 0) {
+    document
+      .querySelector("#checkboxLunch")
+      .setCustomValidity("Please select at least lunch or dinner");
+    document.querySelector("#checkboxLunch").reportValidity();
+    } else {
+        // Collect all the form data
+        const mealPackage = document.querySelector("#mealPackage").value;
+        const deliveryStart = document.querySelector("#deliveryStart").value;
+        const numPax = document.querySelector("#numPax").value;
+        const numDishes = document.querySelector("#numDishes").value;
+        const whiteRice = document.querySelector("#whiteRice").value;
+        const brownRice = document.querySelector("#brownRice").value;
+        const customerName = document.querySelector("#name").value;
+        const email = document.querySelector("#email").value;
+        const mobile = document.querySelector("#mobile").value;
+        const price = calculatePrice();
+
+        // Clear form
+        clearInput();
+
+        // Add the order data to the controller
+        ordersControl.addOrder( mealPackage,
+                                isLunch,
+                                isDinner,
+                                deliveryStart,
+                                numPax,
+                                numDishes,
+                                whiteRice,
+                                brownRice,
+                                customerName,
+                                email,
+                                mobile,
+                                price,
+                                order_time)
+    } // end if-else block
+}) // End of event listener
+
+
 // This code updates the slider value dynamically
 const sliderVar = document.querySelector('input[type="range"]');
 const sliderDisplay = document.querySelector(".form__slider__value");
+
 function sliderValue() {
   sliderDisplay.innerHTML = sliderVar.value;
   numPax = sliderVar.value; // assigning to numPax so that price can update dynamically
@@ -12,58 +79,12 @@ sliderVar.addEventListener("input", sliderValue);
 const orderList = [];
 let lunchOrDinner = [];
 
-// Function to clear the form on submission
+// Function to clear the form
 function clearInput() {
   document.querySelector("#orderFormId").reset();
 }
 
-// Function to handle the form submission
-
-function submitOrder() {
-  // Store user's inputs into variables
-  const mealPackage = document.querySelector("#mealPackage").value;
-  const deliveryStart = document.querySelector("#deliveryStart").value;
-  const numPax = document.querySelector("#numPax").value;
-  const numDishes = document.querySelector("#numDishes").value;
-  const whiteRice = document.querySelector("#whiteRice").value;
-  const brownRice = document.querySelector("#brownRice").value;
-  const name = document.querySelector("#name").value;
-  const email = document.querySelector("#email").value;
-  const mobile = document.querySelector("#mobile").value;
-
-  // Check if the lunch or dinner has been selected
-  if (lunchOrDinner.length == 0) {
-    //show error message
-    document
-      .querySelector("#checkboxLunch")
-      .setCustomValidity("Please select at least lunch or dinner");
-    document.querySelector("#checkboxLunch").reportValidity();
-  } else {
-    // Create object to store values into object properties
-    const orderDetails = {
-      mealPackage,
-      deliveryStart,
-      numPax,
-      numDishes,
-      whiteRice,
-      brownRice,
-      name,
-      email,
-      mobile,
-    };
-
-    // Store the object into the array (submitReservation)
-    orderList.push(orderDetails);
-
-    // Clear form
-    clearInput();
-
-    console.log(orderList);
-  }
-} // end of submitOrder()
-
 // This code handles the checkboxes
-
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
 
 checkboxes.forEach((checkbox) => {
@@ -78,7 +99,7 @@ function handleChecked(event) {
     } else if (event.target.value == "dinner") {
       isDinner = 1;
     }
-  
+
   } else {
     lunchOrDinner = lunchOrDinner.filter((item) => item != event.target.value);
     if(event.target.value == "lunch") {
@@ -87,16 +108,15 @@ function handleChecked(event) {
       isDinner = 0;
     }
   }
-  
+
   //Check if lunch or dinner checkbox has at least one item in the array. 
   //Clear the validation message so that I can do the submission
   if (lunchOrDinner.length > 0) {
     document.querySelector("#checkboxLunch").setCustomValidity("");
     document.querySelector("#checkboxLunch").reportValidity();
   }
-
   calculatePrice();
-}
+} // end of handleChecked function
 
 
 // This code handles the date limit
@@ -145,8 +165,6 @@ setDate();
 
 // This code handles the carousel slideshow
 let items = document.querySelectorAll(".carousel .carousel-item");
-console.log(items[0])
-console.log(items[1])
 
 items.forEach((el) => {
   // number of slides per carousel-item
@@ -214,7 +232,8 @@ function calculatePrice() {
     (isLunch == 0 && isDinner == 0 ? 1 : isLunch + isDinner) * // Prevents the price from going to zero when user unchecks both boxes
     numPax;
   totalPrice = totalPrice.toFixed(2); // Convert total price to 2 decimal places
-  displayPrice.innerHTML = `Price Total: $${totalPrice}` // Update the DOM element with the total price 
+  displayPrice.innerHTML = `Price Total: $${totalPrice}` // Update the DOM element with the total price
+  return totalPrice;
 }
 
 

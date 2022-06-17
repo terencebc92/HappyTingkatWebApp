@@ -119,7 +119,7 @@
         <!-- This col is for the Form -->
         <!-- Meal package -->
         <div class="col-12 col-md-3 ms-lg-5 mt-5 mt-lg-0 mb-5 form__body">
-          <form id="orderFormId" onsubmit="event.preventDefault(); submitOrder()">
+          <form id="orderFormId">
             <div class="mb-3">
               <label for="mealPackage" class="form-label">Meal Package*:</label>
               <select
@@ -293,6 +293,7 @@
       <div th:insert="fragments/commonScripts.html :: commonScripts"></div>
 
       <!-- PAGE-SPECIFIC SCRIPTS -->
+      <script src="JS/orderController.js"></script>
       <script src="JS/order.js"></script>
 
   </body>
