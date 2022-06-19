@@ -99,7 +99,7 @@ class OrdersController {
                             customerName: order.customerName,
                             email: order.email,
                             mobile: order.mobile,
-                            price: order.price,
+                            price: order.price.toFixed(2),
                             lunchOrDinner: lunchOrDinnerText,
                        }; // end of object
                         ordersController._orders.push(orderObj);

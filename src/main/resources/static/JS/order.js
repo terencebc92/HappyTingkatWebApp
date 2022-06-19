@@ -60,6 +60,12 @@ orderFormId.addEventListener('submit', (event) => {
                                 mobile,
                                 price,
                                 order_time)
+
+        isLunch = 0;
+        isDinner = 0;
+        document.querySelector(".form__price").innerHTML = `Price Total: $100.00`
+        sliderDisplay.innerHTML = 1;
+
     } // end if-else block
 }) // End of event listener
 
