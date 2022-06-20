@@ -48,7 +48,7 @@ background-size: cover;
 }
 
 .carousel-image-2 {
-background: url('../Projectimages/carouselimage2.jpg');
+background: url('../Projectimages/carouselimage2_edited200602.jpg');
 background-size: cover;
 }
 
@@ -71,7 +71,7 @@ background-size: cover;
 #divider {
     position: relative;
     min-height: 200px;
-    background: url('../Projectimages/foodbanner6.jpg');
+    background: url('../Projectimages/foodbanner6_edited200602.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
