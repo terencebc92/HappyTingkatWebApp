@@ -2,8 +2,8 @@ class OrdersController {
 
     constructor() {
         // API route for POST request
-        this.addOrderAPI = "http://localhost:8080/orders/add";
-        this.allOrderAPI = "http://localhost:8080/orders/all";
+        this.addOrderAPI = "http://localhost:8090/orders/add";
+        this.allOrderAPI = "http://localhost:8090/orders/all";
         this._orders = [];
     }
 
@@ -99,7 +99,7 @@ class OrdersController {
                             customerName: order.customerName,
                             email: order.email,
                             mobile: order.mobile,
-                            price: order.price,
+                            price: order.price.toFixed(2),
                             lunchOrDinner: lunchOrDinnerText,
                        }; // end of object
                         ordersController._orders.push(orderObj);
