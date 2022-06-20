@@ -7,6 +7,7 @@ class PackagesController {
         this.domainURL_Prod = "https://happytingkat.herokuapp.com/";
 
         // Change this to _Prod/_Dev depending on what you're using
+//        this.allPackageAPI = this.domainURL_Dev + "package/all"
         this.allPackageAPI = this.domainURL_Prod + "package/all"
 
 

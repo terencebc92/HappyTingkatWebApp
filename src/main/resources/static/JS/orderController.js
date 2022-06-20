@@ -9,6 +9,8 @@ class OrdersController {
         this.domainURL_Prod = "https://happytingkat.herokuapp.com/";
 
         // Change this to _Prod/_Dev depending on what you're using
+//        this.addOrderAPI = this.domainURL_Dev + "orders/add"
+//        this.allOrderAPI = this.domainURL_Dev + "orders/all"
         this.addOrderAPI = this.domainURL_Prod + "orders/add"
         this.allOrderAPI = this.domainURL_Prod + "orders/all"
 
