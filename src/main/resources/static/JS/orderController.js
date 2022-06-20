@@ -2,9 +2,16 @@ class OrdersController {
 
     constructor() {
         // API route for POST request
-        this.addOrderAPI = "http://localhost:8090/orders/add";
-        this.allOrderAPI = "http://localhost:8090/orders/all";
+
         this._orders = [];
+
+        this.domainURL_Dev = "http://localhost:8090/";
+        this.domainURL_Prod = "https://happytingkat.herokuapp.com/";
+
+        // Change this to _Prod/_Dev depending on what you're using
+        this.addOrderAPI = this.domainURL_Prod + "orders/add"
+        this.allOrderAPI = this.domainURL_Prod + "orders/all"
+
     }
 
     // 1) Add order method
