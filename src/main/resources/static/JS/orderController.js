@@ -2,8 +2,8 @@ class OrdersController {
 
     constructor() {
         // API route for POST request
-        this.addOrderAPI = "http://localhost:8080/orders/add";
-        this.allOrderAPI = "http://localhost:8080/orders/all";
+        this.addOrderAPI = "http://localhost:8090/orders/add";
+        this.allOrderAPI = "http://localhost:8090/orders/all";
         this._orders = [];
     }
 
