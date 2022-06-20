@@ -79,7 +79,7 @@ class OrdersController {
         let lunchOrDinnerText = "";
         // clear this orders array
         ordersController._orders = [];
-
+        console.log(this.allOrderAPI);
         // Fetch orders via the API
         fetch(this.allOrderAPI)
             .then((resp) => resp.json())
