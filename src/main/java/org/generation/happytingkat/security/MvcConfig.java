@@ -16,6 +16,9 @@ public class MvcConfig  implements WebMvcConfigurer {
         registry.addViewController("/product").setViewName("product");
         registry.addViewController("/order").setViewName("order");
         registry.addViewController("/admin").setViewName("admin");
+        registry.addViewController("/login").setViewName("login");  // changes here - add 2 registries (login/logout)
+        registry.addViewController("/logout").setViewName("index");
+
     }
 
     @Override
@@ -24,5 +27,8 @@ public class MvcConfig  implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/static/")
                 .setCachePeriod(0);
     }
+
+
+
 }
 

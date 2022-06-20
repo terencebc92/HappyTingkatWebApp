@@ -22,8 +22,8 @@ public class CustomersServiceMySQL implements CustomersService {
 
     @Override
     public List<Customers> all() {
-    //create ArrayList to hold whatever is returned back and add it to the results arraylist
-    //make use of the itemRepository and call the method findAll(iterate through the records)
+        //create ArrayList to hold whatever is returned back and add it to the results arraylist
+        //make use of the itemRepository and call the method findAll(iterate through the records)
         List<Customers> result = new ArrayList<>();
         customersRepository.findAll().forEach(result :: add);
         return result;

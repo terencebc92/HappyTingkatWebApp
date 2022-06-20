@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+      <!-- change 1 - add the package here for mapping setting at front end / feedback to user after submit-->
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>navbar</title>
 </head>
 <body>
 
 <nav th:fragment="navbar" class="navbar navbar-expand-sm navbar-dark" style="background-color: #699e3c;">
     <div class="container-fluid">
-        <a class="navbar-brand" th:classappend="${#httpServletRequest.getRequestURI() == '/index' ? 'active':''}" aria-current="page" th:href="@{index}">T.Logo</a>
+        <a class="navbar-brand" th:classappend="${#httpServletRequest.getRequestURI() == '/index' ? 'active':''}" aria-current="page" th:href="@{index}">
+
+                <img src="Projectimages/logonew.png" style="height:70px">   <!-- change 2 - add the logo in the navbar to replace the text  -->
+        </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,7 +22,6 @@
                 <li class="nav-item">
                     <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/index' ? 'active':''}" aria-current="page" th:href="@{index}">Home</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/aboutus' ? 'active':''}" th:href="@{aboutus}">About Us</a>
                 </li>
@@ -30,6 +34,23 @@
                 <li class="nav-item">
                     <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/admin' ? 'active':''}" th:href="@{admin}">Admin</a>
                 </li>
+
+                <!-- change 3 - add the login/logout(mapping) -->
+
+                <div sec:authorize="isAnonymous()">
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI() == '/login' ? 'active':''}" th:href="@{login}">Log In</a>
+                </li>
+                </div>
+
+
+                <div sec:authorize="isAuthenticated()">
+                    <form id="logOut" th:action="@{/logout}" method="post">
+                        <li class="nav-item"><a class="nav-link" onclick="document.getElementById('logOut').submit();"
+                                                style="cursor: pointer";> Log Out</a></li>
+                                                <!-- additional add on for the mouse hover setting -->
+                    </form>
+                </div>
             </ul>
             <button type="button" class="btn btn-success">YOUR CART</button>
         </div>

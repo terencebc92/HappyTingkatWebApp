@@ -16,6 +16,7 @@ h4 { font-size: 22px; }
 h5 { font-size: 20px; }
 
 
+
 /* Navigation Bar Style */
 nav {
   width: 100%;
@@ -38,10 +39,6 @@ nav {
   color: black;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-}
-
 #intro {
     display: flex;
     height:600px;
@@ -52,34 +49,23 @@ body {
     position: relative;
     text-align: center;
     color: white;
-   
-    
+
+
 }
 
-/*
+/* intro section */
 
-.intro-bg {
-    display: flex;
-    flex-direction: column;
-    background: rgba(199, 171, 89, 0.9);
-    height: 60%;
-    width: 70%;
-    margin: auto; //自动调节到中间
- 
-*/ 
+
 .intro-content {
     display: flex;
     flex-direction: column;
     margin: auto;
-    /*justify-content: center;
-    text-align: center; */
-    /*color:rgba(199, 171, 89); */
     font-size: 80px;
     color: white;
     font-style: Monserratt;
     letter-spacing:5px;
     font-weight: 800;
-   
+
 }  /* https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html */
 
 .intro-quality {
@@ -89,7 +75,6 @@ body {
     font-style: Monserratt;
     letter-spacing: 5px;
     font-weight: 800;
-    /*font-family: 'Cormorant', serif;*/
 
 }
 
@@ -101,30 +86,24 @@ body {
     letter-spacing: 3px;
     font-weight: 600;
 }
-/*
-.intro-icon {
-   
-    margin-right: 30px;
-    font-size: 20px;
-  
 
-}
-*/
-.fa-facebook {
-    background: #3B5998;
-    color: white;
 
-  }
+.video {
+
+    width: 100%;
+    height: auto;
+    padding: 55px;
+
+ }
 
 
 
-
-  /* The 2nd of section */
+  /* why order with us */
 
 
 .header {
     text-align: center;
-    margin: 100px;
+    margin: 50px;
 }
 
 
@@ -132,106 +111,35 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 40px;
-    
-}
-
-.icon-section {
-    display:flex;
-    flex-direction: column;
-    margin: 20px;
-    width: 90%;
-    
-}
-
-
-
-
-
-
-
-/* The 3rd of section - bot been used now */
-
-/*
-
-#aboutus {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height:800px;
-    margin-top: 80px;
-    
-}
-
-.Happy {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 60px;
-
-    
-}
-
-.Team {
-    display: flex;
-    flex-basis: 20%;
-    border-radius: 20px;
-    
-}
-
-.card {
-   display: flex;
-   flex-direction: column;
-   margin: 30px;
-   padding: 20px;
-   border: none;
- 
-}
-
-.shape {
-
-    width: 450px;
-    height: 450px;
 
 }
 
-#Terence img {
-    display: flex;
-    flex-direction: column;
-    transform: translate(50px,100px);
+.why1 > div {
+
+    flex: 50%;
+    margin-bottom: 10px;
+
+}
+
+.icon-section1 {
+
+    margin-top: 25px;
+
+}
+
+.icon-section4 {
+
+    margin-top: -70px;
+
 }
 
 
-.card-img4 {
-    position: absolute;
-    z-index: 2;
-    width: 200px;
-    height: 200px;
-    left: 100px;
-    top: 100px;
-}
 
-
-.shape {
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    z-index: 1;
-    left: 20px;
-    top: 0;
-}
-*/
-
-
-
-
-/* the 3rd of section - back up / has been used */
+/* cards */
 
 .profile-area {
     padding: 80px 0;
-    margin-bottom: 150px;
+    margin-bottom: 60px;
 }
 
 
@@ -262,7 +170,7 @@ body {
     border-radius: 50%;
     border: 7px solid #fff;
     margin-top: -80px;
-    
+
 }
 
 .card:hover .img2 img {
@@ -289,14 +197,14 @@ body {
 .margin-text p {
     font-size: 16px;
     padding: 0 35px;
-    
+
 }
 
 .socials  {
     text-align: center;
     padding-bottom: 20px;
     color: #536878;
-  
+
 
 }
 
@@ -304,9 +212,11 @@ body {
     font-size: 25px;
     color:rgb(199, 171, 89,);
     margin-right:10px;
-} 
+}
 
-/* Footer Style */
+/* footer */
+
+
 #main-footer {
     background: #ffffff;
     color: #302718;
@@ -320,15 +230,12 @@ body {
 
 
 
-@media only screen and (max-width: 768px) {
-   
-    /*
-    .Team {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 50%;
-    } */
 
+
+
+
+
+@media only screen and (max-width: 768px) {
 
 
     .contact {
@@ -336,41 +243,41 @@ body {
     }
 
     .card {
-      
+
         margin-bottom: 40px;
     }
 
-    
-   
-    /*
-    .aboutus-style {
-    width: 100%;
-    height: 1200px;
-    } */
 
 
 
-/*  hide
-    .intro-bg {
-        display: flex;
-        flex-direction: column;
-        background: rgba(199, 171, 89, 0.7);
-        height: 90%;
-        width: 70%;
-        margin: auto; //自动调节到中间
-        padding: 10px;
-    }
+  /* Why order with us */
 
-    .intro-content {
-        display: flex;
-        margin: auto;
-        text-align: justify;
-        color:black;
-        padding: 20px;
-        line-height: 20px;
-    
-    }
-*/
 
-    
+  .header {
+    text-align: center;
+    margin: 100px;
+}
+
+
+.why1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+
+}
+
+.icon-section {
+    display:flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 90%;
+
+}
+
+
+
+
+
 }
