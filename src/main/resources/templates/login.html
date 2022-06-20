@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- PAGE-SPECIFIC STYLES -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+    <link rel="stylesheet" href="CSS/login.css">
+
+    <title>Login</title>
+</head>
+<body>
+
+<!-- COMMON NAV BAR -->
+<div th:insert="fragments/navbar.html :: navbar"></div>
+
+<!-- Login Form -->
+<section class="container">
+    <br/>
+    <div class="row">
+            <div>
+                <h2 style = "text-align: center">Login</h2>
+                <!-- backup - add an img on the left side of the login in form
+                <div>
+                    <img class="img-fluid main-image" src="Projectimages/chinese4dish1-min.jpeg"
+                    />
+                </div>  -->
+                <div th:if="${param.error}">
+                    Please login in with ADMIN name and password.
+                </div>
+            </div>
+            <form th:action="@{/login}" method="post">   <!--tips: I changed back the @{/login} from @{/admin} here as there is no way to implement 2 htmls in a link (My plan is link the login screen override the admin html)-->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" class="form-control" id="username" name="username" aria-describedby="NameHelp" required>
+                    <small id="NameHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" style="background-color:#699e3c" border="none">Submit</button>
+            </form>
+        <!--  Not in use as we have a logout in navbar
+        <div class="col-sm">
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Logout" />
+            </form>
+        </div> -->
+    </div>
+</section>
+
+
+<!--<div th:insert="fragments/navbar.html :: menuModal"></div>  the HTML URL mapping works when I remove code here (Jean's example)-->
+<!-- COMMON FOOTER -->
+<div th:insert="fragments/footer.html :: footer"></div>
+
+<!-- COMMON SCRIPTS -->
+<div th:insert="fragments/commonScripts.html :: commonScripts"></div>
+
+<!-- COMMON STYLES -->
+<div th:insert="fragments/commonStyles.html :: commonStyles"></div>
+
+
+
+<!-- SCRIPTS AND STYLES-->
+<!-- Bootstrap CSS
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+-->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -12,399 +12,250 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
     <link rel="stylesheet" href="CSS/AboutUsstyle.css">
 
+    <!-- Imported Font Families -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+
+    <!-- Imported Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <title>About Us</title>
 
 </head>
 <body>
 
+<!--COMMON NAV BAR-->
+<div th:insert="fragments/navbar.html :: navbar"></div>
 
-    <!--COMMON NAV BAR-->
-    <div th:insert="fragments/navbar.html :: navbar"></div>
 
-  <!-- The 1st of section - Introduction -->
-
+<!-- Introduction Section -->
 <section id="intro">
-      
-          <div class="intro-content">
+    <div class="intro-content">
+        <p>HAPPY TINGKAT</p>
+        <p class="intro-quality">QUALITY PRODUCTS AND RICH FLAVOURS</p>
+        <p class="intro-open">OPEN DAILY FOR DELIVERY</p>
+        <!-- alternative text
 
-            <p>HAPPY TINGKAT</p>
-            
-            <p class="intro-quality">QUALITY PRODUCTS AND RICH FLAVOURS</p>
-            
-            <p class="intro-open">OPEN DAILY FOR DELIVERY</p>
-
-            <!-- alternative text 
-
-            <p>At HappyTechies :), we'd love to be your dietary assistants in your life.
-            Create a convenient, delicious, healthy and cost-effective meal for you and your family.
-            In our fast-paced life, planning and preparing all of our daily meals can become challenging.
-            Especially when juggling work while establishing regular and healthy eating habits for yourself and your family.
-            The Dailybowl is designed to provide you with the perfect daily regimen of healthy eating habit.
-            Let you stay at home, save a lot of time for purchasing, preparing and cooking, and get healthy while tasting delicious. 
-            If you'd like to add to your meal, order our new market items. Find us on the following platforms:</p>
-            -->
-          </div>
-    
+        <p>At HappyTechies :), we'd love to be your dietary assistants in your life.
+        Create a convenient, delicious, healthy and cost-effective meal for you and your family.
+        In our fast-paced life, planning and preparing all of our daily meals can become challenging.
+        Especially when juggling work while establishing regular and healthy eating habits for yourself and your family.
+        The Dailybowl is designed to provide you with the perfect daily regimen of healthy eating habit.
+        Let you stay at home, save a lot of time for purchasing, preparing and cooking, and get healthy while tasting delicious.
+        If you'd like to add to your meal, order our new market items. Find us on the following platforms:</p>
+        -->
+    </div>
 </section>
 
 
-<!-- The 2nd of section - Why order with us -->
+
+<!-- video section -->
+<section>
+    <video class = "video" controls src="Projectimages/video_veg.mp4"  type="video/mp4">
+    </video>
+</section>
 
 
-<section id="why-order"> 
-    
+<!-- Why order with us Section-->
+<section id="why-order">
     <div class="header">
-        
-        <!-- alternative text
-
-        <p>With a wealth of hospitality experience and an abundance of passion, our team has created a wonderful little foodie hub. Our Daily Food & Co. has a strong relationship with our regional farmers and is trying to source seasonal and local produce as much as possible.Dishes that are filled with thoughtfully selected, fresh and healthy ingredients, meant to nourish your bodies, delight your taste buds, and provide you the energy need to tackle your day. We invest the time and diligence so you don’t have to.
-
-        We believe strongly that everything we put into our body matters, and that is why we do what we do to help improve and enhance all the lives we can.</p>  -->
-   
-
-    <div class="why1">  
-
-          <div class="icon-section">
-              <div class="icon">
-                  <img src="Projectimages/meal1.png" width="170px" height="170px">
-                  <br>
-                  <br>
-              </div>
-              <div> 
-                  <h2>Preparation</h2>
-                  <br>
-                  <br>
-                  <h2>The Finer Details</h2>
-                  <br>
-                  <br>
-                  <p>We abide by a strict hygiene code of practice at all times. Every ingredient is carefully examined, then kept in their respective safe temperature storages. We look into just about everything to keep things fresh. There’s no compromise in that.</p>
-              </div>
-          </div>
-
-          <div class="icon-section">
+        <div class="why1">
+            <div class="icon-section1">
                 <div class="icon">
-                  <img src="Projectimages/meal2.png" width="160px" height="220px">
-                  <br>
-                  <br>
+                    <img src="Projectimages/meal1.png" width="170px" height="170px">
+                    <br>
+                    <br>
                 </div>
                 <div>
-                  <h2>Ingredients</h2>
-                  <br>
-                  <br>
-                  <h2>Quality is our thing</h2>
-                  <br>
-                  <br>
-                  <p>It’s about passion and having an eye for fresh picks. Our dedicated team of chefs source and prep your meals responsibly with as little waste as possible. We believe in honest ingredients and turning them into food that nourishes the body and soul. </p>
+                    <h2>Preparation</h2>
+                    <h2>The Finer Details</h2>
+                    <br>
+                    <p style="padding: 30px">We abide by a strict hygiene code of practice at all times. Every ingredient is carefully examined, then kept in their respective safe temperature storages. We look into just about everything to keep things fresh. There’s no compromise in that.</p>
                 </div>
-          </div>
-
-          <div class="icon-section">
+            </div>
+            <div class="icon-section2">
                 <div class="icon">
-                    <img src="Projectimages/meal3.png" width="220px" height="150px">
+                    <img src="Projectimages/meal2.png" width="150px" height="210px">
+                    <br>
+                </div>
+                <div>
+                    <h2>Ingredients</h2>
+                    <h2>Quality is our thing</h2>
+                    <br>
+                    <br>
+                    <p style="padding: 15px 30px">It’s about passion and having an eye for fresh picks. Our dedicated team of chefs source and prep your meals responsibly with as little waste as possible. We believe in honest ingredients and turning them into food that nourishes the body and soul. </p>
+                </div>
+            </div>
+            <div class="icon-section3">
+                <div class="icon">
+                    <img src="Projectimages/meal3.png" width="200px" height="130px">
                     <br>
                     <br>
                     <br>
                 </div>
                 <div>
                     <h2>Technology</h2>
-                    <br>
-                    <br>
                     <h2>Food and science</h2>
                     <br>
                     <br>
-                    <p>We strive for gastronomic excellence, made possible powered by the industry’s leading technology using the High Pressure Processing (HPP) technique. The delicate relationship between food and science co-exists to serve better, healthier, and longer-lasting food. Safety first, we only serve food we love.</p>
+                    <p style="padding: 30px">We strive for gastronomic excellence, made possible powered by the industry’s leading technology using the High Pressure Processing (HPP) technique. The delicate relationship between food and science co-exists to serve better, healthier, and longer-lasting food. Safety first, we only serve food we love.</p>
                 </div>
-          </div>
-
-          <div class="icon-section">
+            </div>
+            <div class="icon-section4">
                 <div class="icon">
-                  <img src="Projectimages/meal4.png" width="150px" height="250px">
-                  <br>
-                  <br>
+                    <img src="Projectimages/meal4.png" width="140px" height="240px">
+                    <br>
                 </div>
                 <div>
-                  <h2>Nutritionist</h2>
-                  <br>
-                  <br>
-                  <h2>Working with the best</h2>
-                  <br>
-                  <br>
-                  <p>Our Olympic-certified nutritionist plays an essential role here at Happy Tingkat. They have a deep understanding of food and how it benefits our body, mood, and energy. With their expertise and our ethos in mind, we aim to bring you an easy solution towards healthier eating and living.</p>
+                    <h2>Nutritionist</h2>
+                    <h2>Working with the best</h2>
+                    <br>
+                    <br>
+                    <p style="padding: 35px 30px">Our Olympic-certified nutritionist plays an essential role here at Happy Tingkat. They have a deep understanding of food and how it benefits our body, mood, and energy. With their expertise and our ethos in mind, we aim to bring you an easy solution towards healthier eating and living.</p>
                 </div>
-          </div>
-
-
-</section>
-
-
-
-<!-- The 3rd of Section -- not been used -- >
-
-
-<section id="aboutus" class="aboutus-style">
-    
-    <div class="Happy">
-      <h3>We are HappyTechies :)</h3><img src="Projectimages/tomato logo.png" width="60px" height="60px">
-    </div>
-
-  <div class="Team">
-
-
-    <div class="card" style="width: 18rem;">
-
-      <img src="mages/Desmond Profile Pic.jpg" class="rounded-circle" alt="Team Image" width="304" height="236"> 
-  
-
-      <div class="card-body">
-
-        <h5 class="card-title">Team Member</h5>
-
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        
-
-        <a href="#" class="fa fa-facebook"></a>
-
-        <a href="#" class="fa fa-instagram"></a>
-
-        <a href="#" class="fa fa-twitter"></a>
-      </div>
-    </div>
-
-
-    <div class="card" id = "Terence" style="width: 18rem;">
-
-        <div>
-            <img src="Projectimages/Tereence_new.png" class="card-img2" alt="Team img">
-        </div>
-
-        <div>
-            <img src="Projectimages/profile bg.svg" class="shape" alt="">
-        </div>
-
-      <div class="card-body">
-
-        <h5 class="card-title">Team Member</h5>
-
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        
-
-        <a href="#" class="fa fa-facebook"></a>
-
-        <a href="#" class="fa fa-instagram"></a>
-
-        <a href="#" class="fa fa-twitter"></a>
-      </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-
-      <img src="Projectimages/Gideon_new.png" class="card-img3" alt="Team img">
-
-      <div class="card-body">
-
-        <h5 class="card-title">Team Member</h5>
-
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        
-
-        <a href="#" class="fa fa-facebook"></a>
-
-        <a href="#" class="fa fa-instagram"></a>
-
-        <a href="#" class="fa fa-twitter"></a>
-      </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-
-        <div class="card-img">
-        
-            <img src="Projectimages/profile bg.svg" class="shape" alt="">
-        
-            <img src="Projectimages/Amy_new.png" class="card-img4" alt="Team img">
-
-        </div>
-      
-      <div class="card-body">
-
-          <h5 class="card-title">Team Member</h5>
-
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          
-          <a href="#" class="fa fa-facebook"></a>
-
-          <a href="#" class="fa fa-instagram"></a>
-
-          <a href="#" class="fa fa-twitter"></a>
-
-      </div>
-
-    </div>
-  
-  </div>
-    
-</section>  -->
-
-
-
-<!-- About Us - back up / has been utilised currently-->
-
-<section>
-
-  <div class="profile-area">
-
-    <div class="container">
-              
-      <div class="row">
-
-          <div class="col-12 col-md-6 col-lg-3">
-            
-                  <div class="card">
-
-                     <div class="img1"><img src="Projectimages/Amybg_2.jpg" alt=""></div>
-                     <div class="img2"><img src="Projectimages/Picture D.png" alt=""></div>
-                      <div class="main-text">
-                        <h2>Team Member
-                        <br>Desmond Chua</h2>
-                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                      <div class="socials">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
-                            <a xlink:href="" target="F">
-                            <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
-                            </a>
-                          </svg>
-                         
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <a xlink:href="" target="I">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                            </a>
-                          </svg>
-                        
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                            <a xlink:href="" target="T">
-                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                            </a>
-                          </svg>
-                      </div>
-
-                  </div>
-
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-                  
-                <div class="card">
-
-                   <div class="img1"><img src="Projectimages/Desmondbg.jpg" alt=""></div>
-                   <div class="img2"><img src="Projectimages/Picture T2.png" alt=""></div>
-                   <div class="main-text">
-                      <h2>Team Member
-                      <br>Terence Chia</h2>
-                      <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="socials">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
-                          <a xlink:href="" target="F">
-                          <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
-                          </a>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                          <a xlink:href="" target="I">
-                          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                          </a>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                          <a xlink:href="" target="T">
-                          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                          </a>
-                        </svg>
-                    </div>
-
-                </div>
-
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-                  
-              <div class="card">
-
-                 <div class="img1"><img src="Projectimages/Gideonbg.jpg" alt=""></div>
-                 <div class="img2"><img src="Projectimages/Picture G.png" alt=""></div>
-                 <div class="main-text">
-                    <h2>Team Member   
-                    <br>Gideon Fu</h2>
-                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <div class="socials">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
-                        <a xlink:href="" target="F">
-                        <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
-                        </a>
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                        <a xlink:href="" target="I">
-                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                        </a>
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                        <a xlink:href="" target="T">
-                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                        </a>
-                      </svg>
-                  </div>
-
-              </div>
-
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-                  
-            <div class="card">
-
-               <div class="img1"><img src="Projectimages/Terencebg.jpg" alt=""></div>
-               <div class="img2"><img src="Projectimages/Picture A.png" alt=""></div>
-               <div class="main-text">
-                  <h2>Team Member
-                  <br>Amy Zhang</h2>
-                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="socials">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
-                      <a xlink:href="" target="T">
-                      <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
-                      </a>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                      <a xlink:href="" target="I">
-                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                      </a>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                      <a xlink:href="" target="T">
-                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                      </a>
-                    </svg>
-                </div>
-
             </div>
-  
-          </div>
-
-      </div>
-      
-  </div>
-  </div>
+        </div>
+    </div>
 </section>
 
-    <!-- COMMON FOOTER -->
-    <div th:insert="fragments/footer.html :: footer"></div>
 
-    <!-- COMMON SCRIPTS -->
-    <div th:insert="fragments/commonScripts.html :: commonScripts"></div>
+<!-- About Us Section-->
+<section>
+    <div class="profile-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="img1"><img src="Projectimages/Amybg_2.jpg" alt=""></div>
+                        <div class="img2"><img src="Projectimages/Picture D.png" alt=""></div>
+                        <div class="main-text">
+                            <h2>Team Member
+                                <br>Desmond Chua</h2>
+                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="socials">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
+                                <a xlink:href="" target="F">
+                                    <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
+                                </a>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <a xlink:href="" target="I">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </a>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <a xlink:href="" target="T">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </a>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="img1"><img src="Projectimages/Desmondbg.jpg" alt=""></div>
+                        <div class="img2"><img src="Projectimages/Picture T2.png" alt=""></div>
+                        <div class="main-text">
+                            <h2>Team Member
+                                <br>Terence Chia</h2>
+                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="socials">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
+                                <a xlink:href="" target="F">
+                                    <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
+                                </a>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <a xlink:href="" target="I">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </a>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <a xlink:href="" target="T">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </a>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="img1"><img src="Projectimages/Gideonbg.jpg" alt=""></div>
+                        <div class="img2"><img src="Projectimages/Picture G.png" alt=""></div>
+                        <div class="main-text">
+                            <h2>Team Member
+                                <br>Gideon Fu</h2>
+                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="socials">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
+                                <a xlink:href="" target="F">
+                                    <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
+                                </a>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <a xlink:href="" target="I">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </a>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <a xlink:href="" target="T">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </a>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <div class="img1"><img src="Projectimages/Terencebg.jpg" alt=""></div>
+                        <div class="img2"><img src="Projectimages/Picture A.png" alt=""></div>
+                        <div class="main-text">
+                            <h2>Team Member
+                                <br>Amy Zhang</h2>
+                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="socials">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
+                                <a xlink:href="" target="T">
+                                    <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
+                                </a>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <a xlink:href="" target="I">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </a>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <a xlink:href="" target="T">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </a>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMMON FOOTER -->
+<div th:insert="fragments/footer.html :: footer"></div>
+
+<!-- COMMON SCRIPTS -->
+<div th:insert="fragments/commonScripts.html :: commonScripts"></div>
 
 </body>
-
 </html>
