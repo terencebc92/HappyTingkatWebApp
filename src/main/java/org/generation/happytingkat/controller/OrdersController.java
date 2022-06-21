@@ -61,7 +61,11 @@ public class OrdersController {
 
     }
 
-
-
+    @CrossOrigin
+    @DeleteMapping( "/{id}" )
+    public void delete( @PathVariable Integer id )
+    {
+        ordersService.delete( id );
+    }
 
 }

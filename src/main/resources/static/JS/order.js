@@ -36,12 +36,20 @@ orderFormId.addEventListener('submit', (event) => {
         const deliveryStart = document.querySelector("#deliveryStart").value;
         const numPax = document.querySelector("#numPax").value;
         const numDishes = document.querySelector("#numDishes").value;
-        const whiteRice = document.querySelector("#whiteRice").value;
-        const brownRice = document.querySelector("#brownRice").value;
+        let whiteRice = document.querySelector("#whiteRice").value;
+        let brownRice = document.querySelector("#brownRice").value;
         const customerName = document.querySelector("#name").value;
         const email = document.querySelector("#email").value;
         const mobile = document.querySelector("#mobile").value;
         const price = calculatePrice();
+
+        // For the optional whiteRice and brownRice
+        if (whiteRice == '') {
+            whiteRice = 0;
+        }
+        if (brownRice == ''){
+            brownRice = 0;
+        }
 
         // Clear form
         clearInput();

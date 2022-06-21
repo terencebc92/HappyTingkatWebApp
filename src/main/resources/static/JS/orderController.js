@@ -11,8 +11,10 @@ class OrdersController {
         // Change this to _Prod/_Dev depending on what you're using
 //        this.addOrderAPI = this.domainURL_Dev + "orders/add"
 //        this.allOrderAPI = this.domainURL_Dev + "orders/all"
+//        this.deleteOrderAPI = this.domainURL_Dev + "orders/"
         this.addOrderAPI = this.domainURL_Prod + "orders/add"
         this.allOrderAPI = this.domainURL_Prod + "orders/all"
+        this.deleteOrderAPI = this.domainURL_Prod + "orders/"
 
     }
 
@@ -72,7 +74,6 @@ class OrdersController {
 
     } // End of addOrder method
 
-
     displayOrder(){
         // assign  controller
         let ordersController = this;
@@ -114,12 +115,20 @@ class OrdersController {
                        }; // end of object
                         ordersController._orders.push(orderObj);
                   }); // end of forEach
+
+                  // Render page
                   ordersController.renderAdminPage();
-            }) // end of then
+
+                  // Add event listener to each of the delete icons
+                  const deleteIcons = document.querySelectorAll("i");
+                  deleteIcons.forEach(icon => {
+                    icon.addEventListener("click", deleteRow);
+                  });
+
+            }) // End of then
             .catch(function(error) {
                 console.log(error);
             });
-
     } // end of displayOrder()
 
     renderAdminPage(){
@@ -131,6 +140,8 @@ class OrdersController {
         // loop through orders, get order object and index, take each attribute and place inside
         // populate the showOrderRowsDesktop and showOrderRowsMobile HTL
         this._orders.forEach ((order, index) => {
+
+            order.order_time = order.order_time.substring(0,16).replace(" ", "<br>")
             // Desktop HTML
             showOrderRowsDesktop +=
           `
@@ -148,7 +159,7 @@ class OrdersController {
             <td>${order.email}</td>
             <td>${order.mobile}</td>
             <td>${order.price}</td>
-            <td><i class="bi bi-trash-fill"></i></td>
+            <td><i class="bi bi-trash-fill" id=${order.idorder}></i></td>
           </tr>
           `;
 
@@ -164,7 +175,7 @@ class OrdersController {
               <td>${order.order_time}</td>
               <td>${order.customerName}</td>
               <td>${order.price}</td>
-              <td class="text-center"><i class="bi bi-trash-fill"></i></td>
+              <td class="text-center"><i class="bi bi-trash-fill" id=${order.idorder}></i></td>
             </tr>
             <tr>
                 <!-- This is the collapsible content -->
@@ -180,6 +191,10 @@ class OrdersController {
                         <tr>
                         <th class="px-4">Meal Package (days):</th>
                         <td class="px-4">${order.mealPackage}</td>
+                        </tr>
+                        <tr>
+                        <th class="px-4">Delivery Start Date:</th>
+                        <td class="px-4">${order.deliveryStart}</td>
                         </tr>
                         <tr>
                         <th class="px-4">Lunch/Dinner:</th>
@@ -226,7 +241,31 @@ class OrdersController {
         document.querySelector("div.desktop tbody").innerHTML = showOrderRowsDesktop;
         document.querySelector("div.mobile tbody").innerHTML = showOrderRowsMobile;
 
-    }
+    } // end of renderAdminPage()
 
+    deleteOrder(id){
+        fetch(this.deleteOrderAPI + id, {
+        method: 'DELETE'
+        })
+        .then(function(response) {
+            console.log(response.status); // Will show you the status
+            if (response.ok) {
+                alert("Successfully deleted order id " + id + "!")
+                window.location.reload();
+            }
+            else {
+                throw Error(response.statusText);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert("Error deleting order from order list")
+        });
+    } // end of deleteOrder(id)
 } // End of OrdersController Class
 
+
+function deleteRow(event){
+    let id = event.target.getAttribute("id");
+    ordersController.deleteOrder(id);
+};
