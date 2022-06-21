@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/indexstyle.css">
 
 
-    <title>Happy Tingkat Bootstrap</title>
+    <title>Happy Tingkat Main</title>
 </head>
 
 <body>
@@ -35,10 +35,9 @@
             <div class="carousel-item carousel-image-1 active">
                 <div class="container">
                     <div class="carousel-caption d-none d-sm-block mb-5">
-                        <h1 class="display-3">Heading One</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam deleniti reiciendis ratione
-                            quod aliquid inventore vero perspiciatis.</p>
-                        <a href="#" class="btn btn-success btn-lg">Order now</a>
+                        <h1 class="display-3">Best Tingkat Delivery!</h1>
+                        <p class="lead">Delivering nutritious meals 365 days - Islandwide Delivery :)</p>
+                        <a th:classappend="${#httpServletRequest.getRequestURI() == '/order' ? 'active':''}" th:href="@{order}" class="btn btn-success btn-lg">Order now</a>
                     </div>
                 </div>
             </div>
@@ -46,10 +45,9 @@
             <div class="carousel-item carousel-image-2">
                 <div class="container">
                     <div class="carousel-caption d-none d-sm-block text-right mb-5">
-                        <h1 class="display-3">Heading Two</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam deleniti reiciendis ratione
-                            quod aliquid inventore vero perspiciatis.</p>
-                        <a href="#" class="btn btn-success btn-lg">Catering Menu</a>
+                        <h1 class="display-3">Daily Meal Subscription</h1>
+                        <p class="lead">Enjoy delicious home-cooked meals worry-free for 10, 20, or 30 days. Choose the meal plan that suit you best and leave the rest to us!</p>
+                        <a th:classappend="${#httpServletRequest.getRequestURI() == '/product' ? 'active':''}" th:href="@{product}" class="btn btn-success btn-lg">Catering Menu</a>
                     </div>
                 </div>
             </div>
@@ -57,10 +55,9 @@
             <div class="carousel-item carousel-image-3">
                 <div class="container">
                     <div class="carousel-caption d-none d-sm-block text-left mb-5">
-                        <h1 class="display-3">Heading Three</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam deleniti reiciendis ratione
-                            quod aliquid inventore vero perspiciatis.</p>
-                        <a href="#" class="btn btn-success btn-lg">About Us</a>
+                        <h1 class="display-3">Time to eat real healthy food!</h1>
+                        <p class="lead">Zero processed and canned food with no added MSG! Suitable for the eldery and young children!</p>
+                        <a th:classappend="${#httpServletRequest.getRequestURI() == '/aboutus' ? 'active':''}" th:href="@{aboutus}" class="btn btn-success btn-lg">About Us</a>
                     </div>
                 </div>
             </div>
@@ -86,22 +83,22 @@
             <div class="col-md-3 mb-3 text-center">
                 <i class="fas fa-bars fa-3x mb-2"></i>
                 <h3>Go to order now</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, veniam.</p>
+                <p>Select lunch/dinner, meal delivery start date, meal options and add-ons!</p>
             </div>
             <div class="col-md-3 mb-3 text-center">
                 <i class="fas fa-shopping-basket fa-3x mb-2"></i>
                 <h3>Choose your package</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, veniam.</p>
+                <p>Chinese and Halal packages both available! Choose between 10, 20 or 30 days package!</p>
             </div>
             <div class="col-md-3 mb-3 text-center">
                 <i class="fas fa-cart-plus fa-3x mb-2"></i>
                 <h3>Add to cart & select cart</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, veniam.</p>
+                <p>Review your order details before confirmation!</p>
             </div>
             <div class="col-md-3 mb-3 text-center">
                 <i class="fas fa-credit-card fa-3x mb-2"></i>
                 <h3>Select payment & place order</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, veniam.</p>
+                <p>We accept all major credit cards Visa/Master/American Express and PayNow!</p>
             </div>
         </div>
     </div>
@@ -133,16 +130,15 @@
                         <div class="card-header">
                             <h5 class="mb-0">
                                 <a href="#collapseOne" data-toggle="collapse" data-parent="accordion">
-                                    Question One
+                                    Qn 1: Do you offer Tingkat delivery for 1 pax?
                                 </a>
                             </h5>
                         </div>
 
                         <div id="collapseOne" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ea officiis distinctio exercitationem dolor minus placeat
-                                amet commodi, ab a perspiciatis officia nobis reiciendis numquam totam repudiandae molestias nulla, quod
-                                voluptatibus modi rerum laboriosam tenetur. Nihil, soluta eaque? Minima, deserunt.
+                                Yes, we do! We offer tingkat delivery services for 1 up to 3 pax.
+                                Simply indicate your preferences when ordering and we will prepare your meals accordingly.
                             </div>
                         </div>
                     </div>
@@ -151,16 +147,16 @@
                         <div class="card-header">
                             <h5 class="mb-0">
                                 <a href="#collapseTwo" data-toggle="collapse" data-parent="accordion">
-                                    Question Two
+                                    Qn 2: Is there a delivery fee?
                                 </a>
                             </h5>
                         </div>
 
                         <div id="collapseTwo" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ea officiis distinctio exercitationem dolor minus placeat
-                                amet commodi, ab a perspiciatis officia nobis reiciendis numquam totam repudiandae molestias nulla, quod
-                                voluptatibus modi rerum laboriosam tenetur. Nihil, soluta eaque? Minima, deserunt.
+                                Free for HDB units and landed houses! For customers residing in condominimums, it will
+                                be free to drop off the food at the guardhouse. Otherwise, there will be an additional
+                                $20 delivery charge to deliver food to the unit.
                             </div>
                         </div>
                     </div>
@@ -169,16 +165,19 @@
                         <div class="card-header">
                             <h5 class="mb-0">
                                 <a href="#collapseThree" data-toggle="collapse" data-parent="accordion">
-                                    Question Three
+                                    Qn 3: How are your tingkat meals different from the other caterers?
                                 </a>
                             </h5>
                         </div>
 
                         <div id="collapseThree" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ea officiis distinctio exercitationem dolor minus placeat
-                                amet commodi, ab a perspiciatis officia nobis reiciendis numquam totam repudiandae molestias nulla, quod
-                                voluptatibus modi rerum laboriosam tenetur. Nihil, soluta eaque? Minima, deserunt.
+                                In Happy Tingkat, we target to provide nutritious meals to also the eldery and children.
+                                That is why we created our dishes with less salt, less oil, and no added MSG. The ingredients
+                                in our tingkat meals are specially prepared to be easily digestible. They are softer and
+                                easier to chew, allowing the bodies of older people to easily process and absorb the
+                                nutrients they need. Plus, our menu plan is specially designed to suit the taste buds
+                                of the young and old. It is also filled with healthy foods like scallops and red dates!
                             </div>
                         </div>
                     </div>
@@ -190,16 +189,17 @@
                         <div class="card-header">
                             <h5 class="mb-0">
                                 <a href="#collapseFour" data-toggle="collapse" data-parent="accordion">
-                                    Question Four
+                                    Qn 4: Why choose Happy Tingkat :)?
                                 </a>
                             </h5>
                         </div>
 
                         <div id="collapseFour" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ea officiis distinctio exercitationem dolor minus placeat
-                                amet commodi, ab a perspiciatis officia nobis reiciendis numquam totam repudiandae molestias nulla, quod
-                                voluptatibus modi rerum laboriosam tenetur. Nihil, soluta eaque? Minima, deserunt.
+                                We are one of the few tingkat caterers in Singapore offering both Chinese and Muslim
+                                cuisine. For busy working families who do not have time to prepare their meals, we
+                                offer highly affordable packages. If you are looking for something affordable and
+                                healthy to eat throughout the day, we got you covered!
                             </div>
                         </div>
                     </div>
@@ -208,16 +208,16 @@
                         <div class="card-header">
                             <h5 class="mb-0">
                                 <a href="#collapseFive" data-toggle="collapse" data-parent="accordion">
-                                    Question Five
+                                    Qn 5: What are your Tingkat delivery timings?
                                 </a>
                             </h5>
                         </div>
 
                         <div id="collapseFive" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ea officiis distinctio exercitationem dolor minus placeat
-                                amet commodi, ab a perspiciatis officia nobis reiciendis numquam totam repudiandae molestias nulla, quod
-                                voluptatibus modi rerum laboriosam tenetur. Nihil, soluta eaque? Minima, deserunt.
+                                We offer two delivery time slots: <br><br>
+                                10.00am - 1.30pm (Lunch)<br><br>
+                                4.00pm - 7.00pm (Dinner)
                             </div>
                         </div>
                     </div>
@@ -226,16 +226,16 @@
                         <div class="card-header">
                             <h5 class="mb-0">
                                 <a href="#collapseSix" data-toggle="collapse" data-parent="accordion">
-                                    Question Six
+                                    Qn 6: Do you offer any trial packages?
                                 </a>
                             </h5>
                         </div>
 
                         <div id="collapseSix" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ea officiis distinctio exercitationem dolor minus placeat
-                                amet commodi, ab a perspiciatis officia nobis reiciendis numquam totam repudiandae molestias nulla, quod
-                                voluptatibus modi rerum laboriosam tenetur. Nihil, soluta eaque? Minima, deserunt.
+                                We currently do not offer any trial packages. For a start, you may try our 10 days package.
+                                If you like our food, you can consider our 20 and 30 days packages as well which offer greater
+                                discounts!
                             </div>
                         </div>
                     </div>
