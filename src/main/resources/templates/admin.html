@@ -47,14 +47,15 @@
         <div class="d-inline">Filter by:</div>
 
         <div class="my-2 d-md-inline-flex">
-          <input class="form__date" type="date" id="dateFilter" />
+          <input class="form__date" type="date" id="dateFilter" onchange="dateFilter()"/>
         </div>
         <div class="my-2 d-md-inline-flex">
           <input
             class="form__search"
             type="text"
             id="searchFilter"
-            placeholder="Keyword search"
+            placeholder="Name search.."
+            onkeyup="filterFunction()"
           />
         </div>
       </div>
