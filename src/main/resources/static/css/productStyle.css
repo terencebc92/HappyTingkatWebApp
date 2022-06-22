@@ -314,6 +314,29 @@ h1 {
     font-weight: bold;
 }
 
+/* Modal Section*/
+#orderButtonModal {
+    color: #ffffff;
+}
+
+#orderButtonModal:link {
+    text-decoration: none;
+}
+
+.todaysMenu {
+    color: #ffffff;
+}
+
+.todaysMenu:link {
+    text-decoration: none;
+}
+
+.menuButton {
+    border: none;
+    outline: none;
+    background: none;
+}
+
 /* Footer Style */
 #main-footer {
     background: #ffffff;

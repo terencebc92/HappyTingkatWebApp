@@ -32,33 +32,3 @@ const packagesInstance = new PackagesController(0);
 
 // Displaying all added products on HTML:
 packagesInstance.displayPackage();
-
-// From Project 4 Task JS Folder:
-// // Select the New Task Form
-// const newItemForm = document.querySelector('#newItemForm');
-
-// // Add an 'onsubmit' event listener
-// newItemForm.addEventListener('submit', (event) => {
-//     // Prevent default action
-//     event.preventDefault();
-
-//     // Select the inputs
-//     const newItemNameInput = document.querySelector('#newItemNameInput');
-//     const newItemDescription = document.querySelector('#newItemDescription');
-
-//     /*
-//         Validation code here
-//     */
-
-//     // Get the values of the inputs
-//     const name = newItemNameInput.value;
-//     const description = newItemDescription.value;
-//     const createdAt = new Date();
-
-//     // Add the task to the task manager
-//     itemsController.addItem(name, description, createdAt);
-
-//     // Clear the form
-//     newItemNameInput.value = '';
-//     newItemDescription.value = '';
-// });
