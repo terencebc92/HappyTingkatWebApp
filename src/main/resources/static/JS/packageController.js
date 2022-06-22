@@ -2,18 +2,8 @@
 
 class PackagesController {
     constructor() {
-
-        this.domainURL_Dev = "http://localhost:8090/";
-        this.domainURL_Prod = "https://happytingkat.herokuapp.com/";
-
-        // Change this to _Prod/_Dev depending on what you're using
-//        this.allPackageAPI = this.domainURL_Dev + "package/all"
-        this.allPackageAPI = this.domainURL_Prod + "package/all"
-
-
         this.allPackageItems = [];
-
-
+        this.allPackageAPI = "http://localhost:8090/package/all";
     }
 
 

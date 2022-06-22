@@ -180,11 +180,12 @@ nav {
 }
 
 .main-text {
-    padding: 38px 0;
+    padding: 38px 10px;
     text-align: center;
     color: rgb(182, 176, 176);
 
 }
+
 
 
 .main-text h2 {
@@ -194,25 +195,30 @@ nav {
     margin: 0 0 20px;
 }
 
+
+
 .margin-text p {
     font-size: 16px;
-    padding: 0 35px;
+    padding: 0 30px;
 
 }
+
 
 .socials  {
     text-align: center;
     padding-bottom: 20px;
     color: #536878;
-
-
 }
+
 
 .socials  {
     font-size: 25px;
     color:rgb(199, 171, 89,);
     margin-right:10px;
 }
+
+
+
 
 /* footer */
 

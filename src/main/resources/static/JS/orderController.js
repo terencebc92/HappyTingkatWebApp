@@ -2,18 +2,9 @@ class OrdersController {
 
     constructor() {
         // API route for POST request
-
+        this.addOrderAPI = "http://localhost:8090/orders/add";
+        this.allOrderAPI = "http://localhost:8090/orders/all";
         this._orders = [];
-
-        this.domainURL_Dev = "http://localhost:8090/";
-        this.domainURL_Prod = "https://happytingkat.herokuapp.com/";
-
-        // Change this to _Prod/_Dev depending on what you're using
-//        this.addOrderAPI = this.domainURL_Dev + "orders/add"
-//        this.allOrderAPI = this.domainURL_Dev + "orders/all"
-        this.addOrderAPI = this.domainURL_Prod + "orders/add"
-        this.allOrderAPI = this.domainURL_Prod + "orders/all"
-
     }
 
     // 1) Add order method
@@ -79,8 +70,7 @@ class OrdersController {
         let lunchOrDinnerText = "";
         // clear this orders array
         ordersController._orders = [];
-        console.log("Running displayOrder method")
-        console.log(this.allOrderAPI);
+
         // Fetch orders via the API
         fetch(this.allOrderAPI)
             .then((resp) => resp.json())
@@ -109,7 +99,7 @@ class OrdersController {
                             customerName: order.customerName,
                             email: order.email,
                             mobile: order.mobile,
-                            price: order.price.toFixed(2),
+                            price: order.price,
                             lunchOrDinner: lunchOrDinnerText,
                        }; // end of object
                         ordersController._orders.push(orderObj);
