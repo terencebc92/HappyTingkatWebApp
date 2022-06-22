@@ -42,6 +42,7 @@ function expandAccordion(event) {
   console.log(elem);
   elem.parentNode.removeChild(elem);
   document.body.style.overflow = "visible";
+  document.body.style.paddingRight = "0";
 
   button.scrollIntoView(true);
 }

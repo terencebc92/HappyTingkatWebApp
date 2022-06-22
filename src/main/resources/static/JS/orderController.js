@@ -269,3 +269,93 @@ function deleteRow(event){
     let id = event.target.getAttribute("id");
     ordersController.deleteOrder(id);
 };
+
+
+function filterFunction() {
+    // Declare variables
+    let input, filter, table, tr, td, i, txtValue, mobileTable, trMobile;
+    input = document.getElementById("searchFilter");
+    filter = input.value.toUpperCase();
+
+    // for desktop
+    table = document.querySelector(".table");
+    tr = table.getElementsByTagName("tr");
+
+    // for mobile
+    mobileTable = document.querySelector(".mobile>.table-responsive>.table");
+    trMobile = mobileTable.querySelectorAll("tr.table__row__mobile");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+        //[8] refers to the "name" column
+      td = tr[i].getElementsByTagName("td")[8];
+      if (td) {
+        txtValue = td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    } // end for loop
+
+    // Loop for mobile rows
+    for (i = 0; i < trMobile.length; i++) {
+        //[2] refers to the "name" column in mobile table
+      td = trMobile[i].getElementsByTagName("td")[2];
+      if (td) {
+        txtValue = td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            trMobile[i].style.display = "";
+        } else {
+            trMobile[i].style.display = "none";
+        }
+      }
+    } // end for loop
+
+  } // end filterFunction()
+
+
+  function dateFilter() {
+    // Declare variables
+    let input, filter, table, tr, td, i, dateValue, mobileTable, trMobile;
+    input = document.getElementById("dateFilter");
+    filter = input.value;
+
+    // for desktop:
+    table = document.querySelector(".table");
+    tr = table.getElementsByTagName("tr");
+
+    // for mobile:
+    mobileTable = document.querySelector(".mobile>.table-responsive>.table");
+    trMobile = mobileTable.querySelectorAll("tr.table__row__mobile");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+        //[1] refers to the "DATE" column
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        dateValue = td.innerText;
+        if (dateValue.indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    } // end for loop
+
+    // Loop for mobile rows:
+    for (i = 0; i < trMobile.length; i++) {
+        //[1] refers to the "DATE" column
+        td = trMobile[i].getElementsByTagName("td")[1];
+        if (td) {
+            dateValue = td.innerText;
+            if (dateValue.indexOf(filter) > -1) {
+                trMobile[i].style.display = "";
+            } else {
+                trMobile[i].style.display = "none";
+            }
+        }
+    } // end for loop
+    
+  } // end dateFilter()

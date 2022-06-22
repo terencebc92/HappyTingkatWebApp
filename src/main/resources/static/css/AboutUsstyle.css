@@ -148,7 +148,8 @@ nav {
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
     overflow: hidden;
     border-radius: 15px;
-
+    height: 45rem;
+    justify-content:space-between;
 }
 
 .img1 img {
@@ -156,10 +157,14 @@ nav {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     width: 100%;
+}
 
+.main-items {
+    transform: translateY(-40%);
 }
 
 .img2 img {
+    /* transform: translateY(-45%); */
     position: relative;
     display: block;
     margin-left: auto;
@@ -169,7 +174,7 @@ nav {
     height: 140px;
     border-radius: 50%;
     border: 7px solid #fff;
-    margin-top: -80px;
+    margin-bottom: 1rem;
 
 }
 
@@ -180,10 +185,12 @@ nav {
 }
 
 .main-text {
-    padding: 38px 0;
+    transform: translateY(-3%);
+    padding: 0 1rem 10px 1rem;
     text-align: center;
     color: rgb(182, 176, 176);
-
+    height: 15rem;
+    /* margin-top: -10rem; */
 }
 
 
@@ -196,23 +203,20 @@ nav {
 
 .margin-text p {
     font-size: 16px;
-    padding: 0 35px;
+    padding: 0 30px;
 
 }
 
-.socials  {
+.socials {
     text-align: center;
-    padding-bottom: 20px;
     color: #536878;
-
-
-}
-
-.socials  {
     font-size: 25px;
-    color:rgb(199, 171, 89,);
-    margin-right:10px;
+    /* color:rgb(199, 171, 89); */
+    margin-right: 10px;
+    padding-bottom: 1rem;
+    margin-top: -6rem;
 }
+
 
 /* footer */
 
@@ -243,10 +247,19 @@ nav {
     }
 
     .card {
-
+        margin-left: 3rem;
+        margin-right: 3rem;
         margin-bottom: 40px;
     }
 
+    .main-text {
+        padding: 0rem 2rem;
+        margin-bottom: -5rem;
+    }
+
+    .main-items {
+        transform: translateY(-63%);
+    }
 
 
 
