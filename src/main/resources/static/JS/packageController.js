@@ -10,12 +10,8 @@ class PackagesController {
 //        this.allPackageAPI = this.domainURL_Dev + "package/all"
         this.allPackageAPI = this.domainURL_Prod + "package/all"
 
-
         this.allPackageItems = [];
-
-
     }
-
 
     displayPackage()
         {
@@ -103,13 +99,14 @@ class PackagesController {
                         <p class="card-text">${item.type}</p>
                       </div>
                       <div id="orderButton">
-                        <a href="#" class="btn btn-lg btn-success"><h5>${item.price}</h5></a>
+                        <a href="https://happytingkat.herokuapp.com/order" class="btn btn-lg btn-success" style="font-weight: bold;">$${item.price}</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
           `
+//          href="http://localhost:8090/order"
 
           if (item.cuisine == "Chinese") {
             showPackageChinese += htmlPackageCard
@@ -144,5 +141,6 @@ function displayPackageDetail(item) {
     document.querySelector("#packageImage").src = item.imageUrl;
     document.querySelector("#packageCuisine").innerHTML = item.cuisine;
     document.querySelector("#packagePrice").innerHTML = item.price;
+    document.querySelector(".todaysMenu").setAttribute("id", item.id);
 }
 
