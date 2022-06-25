@@ -247,7 +247,7 @@ function calculatePrice() {
     (isLunch == 0 && isDinner == 0 ? 1 : isLunch + isDinner) * // Prevents the price from going to zero when user unchecks both boxes
     numPax;
   totalPrice = totalPrice.toFixed(2); // Convert total price to 2 decimal places
-  displayPrice.innerHTML = `Price Total: $${totalPrice}` // Update the DOM element with the total price
+  displayPrice.innerHTML = `Total price: $${totalPrice}` // Update the DOM element with the total price
   return totalPrice;
 }
 
@@ -298,3 +298,10 @@ function getBrownRiceValue() {
   calculatePrice();
 };
 inputBrownRice.addEventListener("input", getBrownRiceValue);
+
+
+//Tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl, {boundary: document.body}) // or document.querySelector('#boundary')
+})

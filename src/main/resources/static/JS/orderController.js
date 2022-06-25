@@ -119,6 +119,14 @@ class OrdersController {
                   // Render page
                   ordersController.renderAdminPage();
 
+                  // Set up DataTable
+                  $(document).ready(function () {
+                    $('#desktopTable').DataTable();
+                    document.getElementById('desktopTable').className = "table table-borderless align-middle text-center mt-2";
+                  });
+
+
+
                   // Add event listener to each of the delete icons
                   const deleteIcons = document.querySelectorAll("i");
                   deleteIcons.forEach(icon => {
