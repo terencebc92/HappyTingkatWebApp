@@ -61,19 +61,29 @@ body {
 
 /* Custom form styles */
 
-.form__select__entries {
+#userFilter {
+  display: none;
+}
+
+
+.form__select__entries,
+.form-select {
   width: 4.4rem;
 }
 
 .form__select__entries,
+.form-select,
 .form__search,
+.form-control,
 .form__date {
 border: 1px solid var(--green);
 height: 2.5rem;
 }
 
 .form__select__entries:focus,
+.form-select:focus,
 .form__search:focus,
+.form-control:focus,
 .form__date:focus {
 border-color: var(--green);
 outline: 0;
@@ -81,12 +91,15 @@ box-shadow: 0 0 0 0.1rem var(--green);
 }
 
 .form__select__entries:hover,
-.form__search:hover
+.form-select:hover,
+.form__search:hover,
+.form-control:hover,
 .form__date:hover {
 box-shadow: 0 0 0 0.1rem var(--green);
 }
 
 .form__search,
+.form-control,
 .form__date {
 width: 10rem;
 padding: 0.375rem 0.5rem;
@@ -195,6 +208,10 @@ tbody tr:last-of-type {
     font-weight: 600;
     background-color: #ded2a836;
     margin-bottom: 0;
+  }
+
+  #userFilter {
+    display: block;
   }
 
   table {

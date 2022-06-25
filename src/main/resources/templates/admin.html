@@ -9,9 +9,11 @@
     <div th:replace="fragments/commonStyles.html :: commonStyles"></div>
 
     <!-- PAGE-SPECIFIC STYLES -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
     <link rel="stylesheet" href="css/adminStyle.css" />
+
     
     <title>Admin</title>
   </head>
@@ -27,7 +29,7 @@
 
     <!-- Custom form for user filter -->
 
-    <div class="container d-md-flex justify-content-between align-items-end form__body">
+    <div class="container justify-content-between align-items-end form__body" id="userFilter">
       <div class="my-2">
         <label for="showEntries">Show</label>
         <select
@@ -66,7 +68,7 @@
 
     <!-- Desktop table -->
     <div class="container desktop table-responsive footer__content__wrap">
-      <table class="table table-borderless align-middle text-center">
+      <table class="table table-borderless align-middle text-center" id="desktopTable">
         <!-- Table headers -->
         <thead>
           <tr class="text-center align-middle">
@@ -100,7 +102,7 @@
     <!-- Mobile table-->
     <div class="container mobile footer__content__wrap" id="collapseRowsAll">
       <div class="table-responsive col-md-12 mb-5">
-        <table class="table table-borderless align-middle">
+        <table class="table table-borderless align-middle" id="mobileTable">
           <thead>
             <tr class="align-middle">
               <th scope="col">
@@ -132,6 +134,8 @@
     <div th:insert="fragments/commonScripts.html :: commonScripts"></div>
 
     <!-- PAGE-SPECIFIC SCRIPTS -->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="JS/orderController.js"></script>
     <script src="JS/displayOrder.js"></script>
 

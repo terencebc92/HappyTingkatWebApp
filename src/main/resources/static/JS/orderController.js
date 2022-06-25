@@ -9,12 +9,12 @@ class OrdersController {
         this.domainURL_Prod = "https://happytingkat.herokuapp.com/";
 
         // Change this to _Prod/_Dev depending on what you're using
-//        this.addOrderAPI = this.domainURL_Dev + "orders/add"
-//        this.allOrderAPI = this.domainURL_Dev + "orders/all"
-//        this.deleteOrderAPI = this.domainURL_Dev + "orders/"
-        this.addOrderAPI = this.domainURL_Prod + "orders/add"
-        this.allOrderAPI = this.domainURL_Prod + "orders/all"
-        this.deleteOrderAPI = this.domainURL_Prod + "orders/"
+        this.addOrderAPI = this.domainURL_Dev + "orders/add"
+        this.allOrderAPI = this.domainURL_Dev + "orders/all"
+        this.deleteOrderAPI = this.domainURL_Dev + "orders/"
+//        this.addOrderAPI = this.domainURL_Prod + "orders/add"
+//        this.allOrderAPI = this.domainURL_Prod + "orders/all"
+//        this.deleteOrderAPI = this.domainURL_Prod + "orders/"
 
     }
 
@@ -118,6 +118,14 @@ class OrdersController {
 
                   // Render page
                   ordersController.renderAdminPage();
+
+                  // Set up DataTable
+                  $(document).ready(function () {
+                    $('#desktopTable').DataTable();
+                    document.getElementById('desktopTable').className = "table table-borderless align-middle text-center mt-2";
+                  });
+
+
 
                   // Add event listener to each of the delete icons
                   const deleteIcons = document.querySelectorAll("i");
