@@ -275,6 +275,12 @@ h1 {
     opacity: 0.9;
 }
 
+.menu-section h3 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
 /* Section 4a: Menu Banner Style */
 
 .menu-header {
@@ -288,10 +294,6 @@ h1 {
     color: #000000;
 }
 
-/* .menu-header h1, p {
-    padding-bottom: 10px;
-} */
-
 .menu-date {
     font-size: 20px;
 }
@@ -301,20 +303,33 @@ h1 {
     padding-bottom: 10px;
 }
 
-/* Section 4b: Menu Display Style */
+/* Section 4b: Menu Display (accordion section) Style */
 .catering-menu {
     text-align: center;
     width: 100%;
     color: #000000;
 }
 
-.menu-section h3 {
-    font-size: 20px;
-    padding-bottom: 10px;
-    font-weight: bold;
+.my-5 {
+    margin-top: 2rem!important;
 }
 
-/* Modal Section*/
+.catering-menu h6 {
+    font-size: 13px;
+}
+
+.chinese-header, .halal-header {
+    display: flex;
+    justify-content: center;
+}
+
+.chinese-header button, .halal-header button {
+    font: 7px;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+/* Modal Section */
 #orderButtonModal {
     color: #ffffff;
 }
@@ -455,7 +470,7 @@ h1 {
 
 @media only screen and (max-width: 768px) {
     .masthead {
-        min-height: 60vh;
+        min-height: 75vh;
     }
 
     .masthead h1, .product-section h1, discount-section h1, menu-section h1 {
@@ -487,5 +502,13 @@ h1 {
 
     .owl-next {
         right: 10px;
+    }
+
+    .menu-block1 {
+        margin-top: -15px;
+    }
+
+    .menu-block2 {
+        margin-top: 30px;
     }
 }

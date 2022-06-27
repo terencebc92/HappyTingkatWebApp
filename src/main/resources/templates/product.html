@@ -82,7 +82,7 @@
         Our Discount Rates
       </h1>
 
-      <table class="table table-reponsive table-hover table-bordered align-middle text-middle">
+      <table class="table table-responsive table-hover table-bordered align-middle text-middle">
         <!-- Table Header -->
         <thead>
           <tr>
@@ -119,19 +119,24 @@
         <span id="fish-icon" class="material-icons">
           set_meal
         </span>
-        <p class="menu-date">25 April - 29 April 2022</p>
+        <p class="menu-date">27 June - 1 July 2022</p>
       </div>
 
       <!-- Section 4b: Menu Display -->
       <div class="catering-menu container my-5">
         <div class="row">
           <div class="menu-block1 col-md-6">
-            <h3>
-              <span class="material-icons">menu_book</span>
-              Chinese Menu
-            </h3>
             <!-- Chinese -->
             <div class="chinese-menu">
+              <div class="chinese-header">
+                <h3>
+                  <span class="material-icons">menu_book</span>
+                  Chinese Menu
+                </h3>
+                <!-- Button to expand/collapse whole chinese menu -->
+                <button class="btn btn-info btn-sm" type="button" id="collapseAllC" data-bs-toggle="collapse" data-bs-target=".multi-collapseC" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne panelsStayOpen-collapseTwo panelsStayOpen-collapseThree panelsStayOpen-collapseFour panelsStayOpen-collapseFive">Show/Hide Menu</button>
+                <!-- End of Button to expand/collapse whole menu -->
+              </div>
               <div class="accordion" id="accordionLeft">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -139,32 +144,21 @@
                       Monday
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse multi-collapseC" aria-labelledby="panelsStayOpen-headingOne">
                     <div class="accordion-body">
-                      <strong>Lunch:</strong>
+                      <h6><strong>Lunch:</strong></h6>
+                      <h6>Soup: Herbal Chicken Soup</h6>
+                      <h6>Dish 1: Stir Fried Cauliflower</h6>
+                      <h6>Dish 2: Steamed Minced Meat</h6>
+                      <h6>Dish 3: Fried Egg with Tomato</h6>
+                      <h6>Dish 4: Ginger-Soy Steamed Fish</h6>
                       <br>
-                      Soup: Herbal Chicken Soup
-                      <br>
-                      Dish 1: Stir Fried Cauliflower
-                      <br>
-                      Dish 2: Steamed Minced Meat
-                      <br>
-                      Dish 3: Fried Egg with Tomato
-                      <br>
-                      Dish 4: Ginger-Soy Steamed Fish
-                      <br>
-                      <br>
-                      <strong>Dinner:</strong>
-                      <br>
-                      Soup: Wonton Soup
-                      <br>
-                      Dish 1: Steamed Cai Xin in Oyster Sauce
-                      <br>
-                      Dish 2: Steamed Chicken with Herbs
-                      <br>
-                      Dish 3: Soybean Stuffed Tofu
-                      <br>
-                      Dish 4: Black Pepper Shrimp
+                      <h6><strong>Dinner:</strong></h6>
+                      <h6>Soup: Wonton Soup</h6>
+                      <h6>Dish 1: Steamed Cai Xin in Oyster Sauce</h6>
+                      <h6>Dish 2: Steamed Chicken with Herbs</h6>
+                      <h6>Dish 3: Soybean Stuffed Tofu</h6>
+                      <h6>Dish 4: Black Pepper Shrimp</h6>
                     </div>
                   </div>
                 </div>
@@ -174,32 +168,21 @@
                       Tuesday
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse multi-collapseC" aria-labelledby="panelsStayOpen-headingTwo">
                     <div class="accordion-body">
-                      <strong>Lunch:</strong>
+                      <h6><strong>Lunch:</strong></h6>
+                      <h6>Soup: Lotus Root & Peanut Soup with Pork Ribs</h6>
+                      <h6>Dish 1: Stir Fried Kai-Lan</h6>
+                      <h6>Dish 2: Sweet & Sour Pork</h6>
+                      <h6>Dish 3: Steamed Egg with Crab Bits</h6>
+                      <h6>Dish 4: Shredded Pork with Scallions</h6>
                       <br>
-                      Soup:  Lotus Root & Peanut Soup with Pork Ribs
-                      <br>
-                      Dish 1: Stir Fried Kai-Lan
-                      <br>
-                      Dish 2: Sweet & Sour Pork
-                      <br>
-                      Dish 3: Steamed Egg with Crab Bits
-                      <br>
-                      Dish 4: Shredded Pork with Scallions
-                      <br>
-                      <br>
-                      <strong>Dinner:</strong>
-                      <br>
-                      Soup: Sliced Garoupa Fish Soup
-                      <br>
-                      Dish 1: Chinese Spinach w/ Chicken Stock
-                      <br>
-                      Dish 2: Honey Shrimp
-                      <br>
-                      Dish 3: Wheatgrass Tofu w/ Shrimp
-                      <br>
-                      Dish 4: Hakka Style Fried Pork Belly
+                      <h6><strong>Dinner:</strong></h6>
+                      <h6>Soup: Sliced Garoupa Fish Soup</h6>
+                      <h6>Dish 1: Chinese Spinach w/ Chicken Stock</h6>
+                      <h6>Dish 2: Honey Shrimp</h6>
+                      <h6>Dish 3: Wheatgrass Tofu w/ Shrimp</h6>
+                      <h6>Dish 4: Hakka Style Fried Pork Belly</h6>
                     </div>
                   </div>
                 </div>
@@ -209,32 +192,21 @@
                       Wednesday
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse multi-collapseC" aria-labelledby="panelsStayOpen-headingThree">
                     <div class="accordion-body">
-                      <strong>Lunch:</strong>
+                      <h6><strong>Lunch:</strong></h6>
+                      <h6>Soup: Shepherd's Purse Tofu Soup</h6>
+                      <h6>Dish 1: Stir Fried Potato with Minced Pork</h6>
+                      <h6>Dish 2: Honey Baked Chicken Drumlets</h6>
+                      <h6>Dish 3: Fried Egg with Onion</h6>
+                      <h6>Dish 4: Thousand Island Fried Fish</h6>
                       <br>
-                      Soup: Shepherd's Purse Tofu Soup
-                      <br>
-                      Dish 1: Stir Fried Potato with Minced Pork
-                      <br>
-                      Dish 2: Honey Baked Chicken Drumlets
-                      <br>
-                      Dish 3: Fried Egg with Onion
-                      <br>
-                      Dish 4: Thousand Island Fried Fish
-                      <br>
-                      <br>
-                      <strong>Dinner:</strong>
-                      <br>
-                      Soup: Black-eyed Peas and Catfish Soup
-                      <br>
-                      Dish 1: Stir-fried Gourd with Eggs
-                      <br>
-                      Dish 2: Fish with Ginger & Scallion
-                      <br>
-                      Dish 3: Basil Scrambled Eggs
-                      <br>
-                      Dish 4: Steam Pork Belly w/ Preserved Vegetables
+                      <h6><strong>Dinner:</strong></h6>
+                      <h6>Soup: Black-eyed Peas and Catfish Soup</h6>
+                      <h6>Dish 1: Stir-fried Gourd with Eggs</h6>
+                      <h6>Dish 2: Fish with Ginger & Scallion</h6>
+                      <h6>Dish 3: Basil Scrambled Eggs</h6>
+                      <h6>Dish 4: Steam Pork Belly w/ Preserved Vegetables</h6>
                     </div>
                   </div>
                 </div>
@@ -244,32 +216,21 @@
                       Thursday
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                  <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse multi-collapseC" aria-labelledby="panelsStayOpen-headingFour">
                     <div class="accordion-body">
-                      <strong>Lunch:</strong>
+                      <h6><strong>Lunch:</strong></h6>
+                      <h6>Soup: Lemongrass & Ginger with Chicken Soup</h6>
+                      <h6>Dish 1:  Shanghai Green w/ Abalone Mushroom</h6>
+                      <h6>Dish 2: Teochew Steamed Fish</h6>
+                      <h6>Dish 3: Braised Egg & Dried Tofu</h6>
+                      <h6>Dish 4: Stir Fried Sliced Beef</h6>
                       <br>
-                      Soup:  Lemongrass & Ginger with Chicken Soup
-                      <br>
-                      Dish 1:  Shanghai Green w/ Abalone Mushroom
-                      <br>
-                      Dish 2: Teochew Steamed Fish
-                      <br>
-                      Dish 3: Braised Egg & Dried Tofu
-                      <br>
-                      Dish 4: Stir Fried Sliced Beef
-                      <br>
-                      <br>
-                      <strong>Dinner:</strong>
-                      <br>
-                      Soup: Winter Melon and Roasted Duck Soup
-                      <br>
-                      Dish 1: Mixed Curry Vegetables
-                      <br>
-                      Dish 2: Beef & Peppers in Black Bean Sauce
-                      <br>
-                      Dish 3: Takuan Steamed Egg
-                      <br>
-                      Dish 4: Pork Ribs King
+                      <h6><strong>Dinner:</strong></h6>
+                      <h6>Soup: Winter Melon and Roasted Duck Soup</h6>
+                      <h6>Dish 1: Mixed Curry Vegetables</h6>
+                      <h6>Dish 2: Beef & Peppers in Black Bean Sauce</h6>
+                      <h6>Dish 3: Takuan Steamed Egg</h6>
+                      <h6>Dish 4: Pork Ribs King</h6>
                     </div>
                   </div>
                 </div>
@@ -279,32 +240,21 @@
                       Friday
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse multi-collapseC" aria-labelledby="panelsStayOpen-headingFive">
                     <div class="accordion-body">
-                      <strong>Lunch:</strong>
+                      <h6><strong>Lunch:</strong></h6>
+                      <h6>Soup: Chinese Watercress Soup with Pork Ribs</h6>
+                      <h6>Dish 1: Chinese Cabbage w/ Mushrooms</h6>
+                      <h6>Dish 2: Crispy Cereal Fish</h6>
+                      <h6>Dish 3: Osmanthus Scrambled Eggs</h6>
+                      <h6>Dish 4: Cumin Fried Duck</h6>
                       <br>
-                      Soup: Chinese Watercress Soup with Pork Ribs
-                      <br>
-                      Dish 1: Chinese Cabbage w/ Mushrooms
-                      <br>
-                      Dish 2: Crispy Cereal Fish
-                      <br>
-                      Dish 3: Osmanthus Scrambled Eggs
-                      <br>
-                      Dish 4: Cumin Fried Duck
-                      <br>
-                      <br>
-                      <strong>Dinner:</strong>
-                      <br>
-                      Soup: Beef Ball Soup
-                      <br>
-                      Dish 1: Stir Fried Mala Lotus Root
-                      <br>
-                      Dish 2: Cantonese-Style Steamed Cod Fish
-                      <br>
-                      Dish 3: Sponge Gourd Tofu
-                      <br>
-                      Dish 4: Tiger Prawns w/ Garlic Ginger Soy Sauce
+                      <h6><strong>Dinner:</strong></h6>
+                      <h6>Soup: Beef Ball Soup</h6>
+                      <h6>Dish 1: Stir Fried Mala Lotus Root</h6>
+                      <h6>Dish 2: Cantonese-Style Steamed Cod Fish</h6>
+                      <h6>Dish 3: Sponge Gourd Tofu</h6>
+                      <h6>Dish 4: Tiger Prawns w/ Garlic Ginger Soy Sauce</h6>
                     </div>
                   </div>
                 </div>
@@ -314,10 +264,14 @@
 
           <!-- Halal -->
           <div class="menu-block2 col-md-6">
-            <h3><span class="material-icons">menu_book</span>
-              Halal Menu
-            </h3>
-
+            <div class="halal-header">
+              <h3><span class="material-icons">menu_book</span>
+                Halal Menu
+              </h3>
+              <!-- Button to expand/collapse whole halal menu -->
+              <button class="btn btn-info btn-sm" type="button" id="collapseAllH" data-bs-toggle="collapse" data-bs-target=".multi-collapseH" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix panelsStayOpen-collapseSeven panelsStayOpen-collapseEight panelsStayOpen-collapseNine panelsStayOpen-collapseTen">Show/Hide Menu</button>
+              <!-- End of Button to expand/collapse whole menu -->
+            </div>
             <div class="accordion" id="accordionRight">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingSix">
@@ -325,32 +279,21 @@
                     Monday
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse multi-collapseH" aria-labelledby="panelsStayOpen-headingSix">
                   <div class="accordion-body">
-                    <strong>Lunch:</strong>
+                    <h6><strong>Lunch:</strong></h6>
+                    <h6>Soup: Beef Ball Soup</h6>
+                    <h6>Dish 1: Stir Fried Cauliflower with Belachan</h6>
+                    <h6>Dish 2: Thai Spicy Chicken Drumlets</h6>
+                    <h6>Dish 3: Fried Egg with Tomato</h6>
+                    <h6>Dish 4: Ginger-Soy Steamed Fish Soup</h6>
                     <br>
-                    Soup: Beef Ball Soup
-                    <br>
-                    Dish 1: Stir Fried Cauliflower with Belachan
-                    <br>
-                    Dish 2: Thai Spicy Chicken Drumlets
-                    <br>
-                    Dish 3: Fried Egg with Tomato
-                    <br>
-                    Dish 4: Ginger-Soy Steamed Fish Soup
-                    <br>
-                    <br>
-                    <strong>Dinner:</strong>
-                    <br>
-                    Soup: Fishball Soup
-                    <br>
-                    Dish 1: Kang Kong Belachan
-                    <br>
-                    Dish 2:  Ikan Goreng Tiga Rasa
-                    <br>
-                    Dish 3: Scrambled Eggs Sambal
-                    <br>
-                    Dish 4: Mahmiah Daging Beef
+                    <h6><strong>Dinner:</strong></h6>
+                    <h6>Soup: Fishball Soup</h6>
+                    <h6>Dish 1: Kang Kong Belachan</h6>
+                    <h6>Dish 2:  Ikan Goreng Tiga Rasa</h6>
+                    <h6>Dish 3: Scrambled Eggs Sambal</h6>
+                    <h6>Dish 4: Mahmiah Daging Beef</h6>
                   </div>
                 </div>
               </div>
@@ -360,32 +303,21 @@
                     Tuesday
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse multi-collapseH" aria-labelledby="panelsStayOpen-headingSeven">
                   <div class="accordion-body">
-                    <strong>Lunch:</strong>
+                    <h6><strong>Lunch:</strong></h6>
+                    <h6>Soup: Sliced Fish Soup</h6>
+                    <h6>Dish 1: Telur Sambal</h6>
+                    <h6>Dish 2: Beef Belado Dendeng</h6>
+                    <h6>Dish 3: Tau Fu Goreng Thai</h6>
+                    <h6>Dish 4: Chicken Satay (10 sticks)</h6>
                     <br>
-                    Soup:  Sliced Fish Soup
-                    <br>
-                    Dish 1: Telur Sambal
-                    <br>
-                    Dish 2: Beef Belado Dendeng
-                    <br>
-                    Dish 3: Tau Fu Goreng Thai
-                    <br>
-                    Dish 4: Chicken Satay (10 sticks)
-                    <br>
-                    <br>
-                    <strong>Dinner:</strong>
-                    <br>
-                    Soup: Kambing Soup
-                    <br>
-                    Dish 1: Acar Timun
-                    <br>
-                    Dish 2: Ayam Panggang
-                    <br>
-                    Dish 3: Oyster Omelette
-                    <br>
-                    Dish 4: Pari Asam Pedas
+                    <h6><strong>Dinner:</strong></h6>
+                    <h6>Soup: Kambing Soup</h6>
+                    <h6>Dish 1: Acar Timun</h6>
+                    <h6>Dish 2: Ayam Panggang</h6>
+                    <h6>Dish 3: Oyster Omelette</h6>
+                    <h6>Dish 4: Pari Asam Pedas</h6>
                   </div>
                 </div>
               </div>
@@ -395,32 +327,21 @@
                     Wednesday
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
+                <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse multi-collapseH" aria-labelledby="panelsStayOpen-headingEight">
                   <div class="accordion-body">
-                    <strong>Lunch:</strong>
+                    <h6><strong>Lunch:</strong></h6>
+                    <h6>Soup: ABC Chicken Soup</h6>
+                    <h6>Dish 1: Lemak Nangka</h6>
+                    <h6>Dish 2: Udang Black Pepper</h6>
+                    <h6>Dish 3: Kentang Belado</h6>
+                    <h6>Dish 4: Ayam Bakar Sunda</h6>
                     <br>
-                    Soup: ABC Chicken Soup
-                    <br>
-                    Dish 1: Lemak Nangka
-                    <br>
-                    Dish 2: Udang Black Pepper
-                    <br>
-                    Dish 3: Kentang Belado
-                    <br>
-                    Dish 4: Ayam Bakar Sunda
-                    <br>
-                    <br>
-                    <strong>Dinner:</strong>
-                    <br>
-                    Soup: Assam Fish Soup
-                    <br>
-                    Dish 1: Urap
-                    <br>
-                    Dish 2: Squid Sumbat
-                    <br>
-                    Dish 3: Onion Omelette
-                    <br>
-                    Dish 4: Mutton Merah
+                    <h6><strong>Dinner:</strong></h6>
+                    <h6>Soup: Assam Fish Soup</h6>
+                    <h6>Dish 1: Urap</h6>
+                    <h6>Dish 2: Squid Sumbat</h6>
+                    <h6>Dish 3: Onion Omelette</h6>
+                    <h6>Dish 4: Mutton Merah</h6>
                   </div>
                 </div>
               </div>
@@ -430,32 +351,21 @@
                     Thursday
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNine">
+                <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse multi-collapseH" aria-labelledby="panelsStayOpen-headingNine">
                   <div class="accordion-body">
-                    <strong>Lunch:</strong>
+                    <h6><strong>Lunch:</strong></h6>
+                    <h6>Soup: Oxtail Soup</h6>
+                    <h6>Dish 1: Sambal Goreng</h6>
+                    <h6>Dish 2: Ayam Kalio</h6>
+                    <h6>Dish 3: Stir Fried Egg w/ Tomato</h6>
+                    <h6>Dish 4:  Ikan Goreng</h6>
                     <br>
-                    Soup: Oxtail Soup
-                    <br>
-                    Dish 1: Sambal Goreng
-                    <br>
-                    Dish 2: Ayam Kalio
-                    <br>
-                    Dish 3: Stir Fried Egg w/ Tomato
-                    <br>
-                    Dish 4:  Ikan Goreng
-                    <br>
-                    <br>
-                    <strong>Dinner:</strong>
-                    <br>
-                    Soup: Spicy Seafood Soup
-                    <br>
-                    Dish 1: Paceri Terong
-                    <br>
-                    Dish 2: Ikan Massala
-                    <br>
-                    Dish 3: Tomato Omelette
-                    <br>
-                    Dish 4: Ayam Mesak Merah
+                    <h6><strong>Dinner:</strong></h6>
+                    <h6>Soup: Spicy Seafood Soup</h6>
+                    <h6>Dish 1: Paceri Terong</h6>
+                    <h6>Dish 2: Ikan Massala</h6>
+                    <h6>Dish 3: Tomato Omelette</h6>
+                    <h6>Dish 4: Ayam Mesak Merah</h6>
                   </div>
                 </div>
               </div>
@@ -465,32 +375,21 @@
                     Friday
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTen">
+                <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse multi-collapseH" aria-labelledby="panelsStayOpen-headingTen">
                   <div class="accordion-body">
-                    <strong>Lunch:</strong>
+                    <h6><strong>Lunch:</strong></h6>
+                    <h6>Soup: Potato Chicken Soup</h6>
+                    <h6>Dish 1: Terong Belado</h6>
+                    <h6>Dish 2: Mutton Rendang</h6>
+                    <h6>Dish 3: Sambal Tau Fu</h6>
+                    <h6>Dish 4: Lemak Siput Sedut</h6>
                     <br>
-                    Soup: Potato Chicken Soup
-                    <br>
-                    Dish 1: Terong Belado
-                    <br>
-                    Dish 2: Mutton Rendang
-                    <br>
-                    Dish 3: Sambal Tau Fu
-                    <br>
-                    Dish 4: Lemak Siput Sedut
-                    <br>
-                    <br>
-                    <strong>Dinner:</strong>
-                    <br>
-                    Soup: Beef Ball Soup
-                    <br>
-                    Dish 1: Bayam Goreng
-                    <br>
-                    Dish 2: Ikan Cereal
-                    <br>
-                    Dish 3: Telor Belado
-                    <br>
-                    Dish 4: Sambal Udang
+                    <h6><strong>Dinner:</strong></h6>
+                    <h6>Soup: Beef Ball Soup</h6>
+                    <h6>Dish 1: Bayam Goreng</h6>
+                    <h6>Dish 2: Ikan Cereal</h6>
+                    <h6>Dish 3: Telor Belado</h6>
+                    <h6>Dish 4: Sambal Udang</h6>
                   </div>
                 </div>
               </div>
@@ -517,7 +416,7 @@
             <p><br>Cuisine: <span id="packageCuisine">XXXXXXXXXXXX</span></p>
             <p>Price: $<span id="packagePrice">XXXXXXXXXXXX</span></p>
             <button class="menuButton">
-              <a id="todayMenuLink" href="#panelsStayOpen-headingOne" data-bs-dismiss="modal">
+              <a id="todayMenuLink" href="#panelsStayOpen-headingFive" data-bs-dismiss="modal">
               <!-- href="http://localhost:8090/product#panelsStayOpen-headingOne"-->
                 <p class="todaysMenu btn btn-info">Today's Menu</p>
               </a>
@@ -526,7 +425,6 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-success" data-bs-dismiss="modal"><a id="orderButtonModal" th:href="@{order}">Order now!</a></button>
-            <!-- href="http://localhost:8090/order">Order now!</a></button> -->
           </div>
         </div>
       </div>
