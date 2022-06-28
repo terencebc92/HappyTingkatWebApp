@@ -50,3 +50,41 @@ function expandAccordion(event) {
 // optional - show current menu on load
 
 // expandAccordion();
+
+// Function to change button text: expand/collapse all (for Chinese accordion menu sections):
+$("#collapseAllC").click( function() {
+    let buttonAll = document.getElementById("collapseAllC");
+    if(!$('.accordion-header').hasClass("active")){
+        $('.accordion-header').removeClass("active").addClass("active");
+        buttonAll.innerHTML = 'Collapse all'
+
+    } else {
+        $('.accordion-header').addClass("active").removeClass("active");
+
+        buttonAll.innerHTML = 'Expand all'
+    }
+});
+
+// Function to change button text: expand/collapse all (for Halal accordion menu sections):
+$("#collapseAllH").click( function() {
+    let buttonAll = document.getElementById("collapseAllH");
+    if(!$('.accordion-header').hasClass("active")){
+        $('.accordion-header').removeClass("active").addClass("active");
+        buttonAll.innerHTML = 'Collapse all'
+
+    } else {
+        $('.accordion-header').addClass("active").removeClass("active");
+        buttonAll.innerHTML = 'Expand all'
+    }
+});
+
+// Saving the form input items based on specific Package in local storage:
+// Variation 1 => 10 Days Package - 3 dishes:
+function createPackageData1() {
+    // Setting the values in local storage:
+    var mealPackage = document.getElementById("mealPackage").value;
+    var numDishes = document.getElementById("numDishes").value;
+
+    localStorage.setItem(mealPackage, "10");
+    localStorage.setItem(numDishes, "3");
+}
