@@ -136,9 +136,13 @@ class PackagesController {
           document.getElementById(infoBtnId).addEventListener("click", function() {
             displayPackageDetail(item)
           });
-          document.querySelector('#orderButton>a').addEventListener("click", storeValue);
-
         });
+
+        // Add eventListener for each price link (<a> element)
+        const priceLinkNodeList = document.querySelectorAll("#orderButton>a");
+         for (let i = 0; i < priceLinkNodeList.length; i++) {
+             priceLinkNodeList[i].addEventListener("click", storeValue);
+         }
 
     } // End of displayProduct method definition
 } // End of ProductController Class definition
