@@ -33,16 +33,6 @@
         <p>HAPPY TINGKAT</p>
         <p class="intro-quality">QUALITY PRODUCTS AND RICH FLAVOURS</p>
         <p class="intro-open">OPEN DAILY FOR DELIVERY</p>
-        <!-- alternative text
-
-        <p>At HappyTechies :), we'd love to be your dietary assistants in your life.
-        Create a convenient, delicious, healthy and cost-effective meal for you and your family.
-        In our fast-paced life, planning and preparing all of our daily meals can become challenging.
-        Especially when juggling work while establishing regular and healthy eating habits for yourself and your family.
-        The Dailybowl is designed to provide you with the perfect daily regimen of healthy eating habit.
-        Let you stay at home, save a lot of time for purchasing, preparing and cooking, and get healthy while tasting delicious.
-        If you'd like to add to your meal, order our new market items. Find us on the following platforms:</p>
-        -->
     </div>
 </section>
 
@@ -50,68 +40,109 @@
 
 <!-- video section -->
 <section>
-    <video class = "video" controls src="Projectimages/video_veg.mp4"  type="video/mp4">
-    </video>
+    <div class="aboutus-video container my-5">
+        <div class="row">
+            <div class="aboutus-block1 col-md-6">
+                <h1 id="videotitle">
+                    Fresh Daily
+                </h1>
+                <p class="videotext">
+                    At Happy Tingkat :), we'd love to be your dietary assistants in your life.
+                    Create a convenient, delicious, healthy and cost-effective meal for you and your
+                    family.
+                    In our fast-paced life, planning and preparing all of our daily meals can become
+                    challenging.
+                    Especially when juggling work while establishing regular and healthy eating
+                    habits for yourself and your family.
+                    Let you stay at home, save a lot of time for purchasing, preparing and cooking,
+                    and get healthy while tasting delicious.
+                    If you'd like to add to your meal, order our new market items.
+                </p>
+                <a class="navbar-product" th:classappend="${#httpServletRequest.getRequestURI() == '/product' ? 'active':''}" aria-current="page"
+                   th:href="@{product}">
+                    <button type="button" class="button-video" style="margin-bottom: 30px">Explore more</button>
+                </a>
+            </div>
+            <div class="aboutus-block2 col-md-6 d-inline-flex">
+                <video class="video" controls src="Projectimages/video_veg.mp4"></video>
+            </div>
+        </div>
+    </div>
 </section>
 
 
 <!-- Why order with us Section-->
 <section id="why-order">
-    <div class="header">
-        <div class="why1">
-            <div class="icon-section1">
-                <div class="icon">
-                    <img src="Projectimages/meal1.png" width="170px" height="170px">
-                    <br>
-                    <br>
-                </div>
-                <div>
-                    <h2>Preparation</h2>
-                    <h2>The Finer Details</h2>
-                    <br>
-                    <p style="padding: 30px">We abide by a strict hygiene code of practice at all times. Every ingredient is carefully examined, then kept in their respective safe temperature storages. We look into just about everything to keep things fresh. There’s no compromise in that.</p>
-                </div>
+    <div class="why">
+        <div class="icon-section">
+            <div class="icon">
+                <img src="Projectimages/meal1.png" width="160px" height="160px">
+                <br>
+                <br>
             </div>
-            <div class="icon-section2">
-                <div class="icon">
-                    <img src="Projectimages/meal2.png" width="150px" height="210px">
-                    <br>
-                </div>
-                <div>
-                    <h2>Ingredients</h2>
-                    <h2>Quality is our thing</h2>
-                    <br>
-                    <br>
-                    <p style="padding: 15px 30px">It’s about passion and having an eye for fresh picks. Our dedicated team of chefs source and prep your meals responsibly with as little waste as possible. We believe in honest ingredients and turning them into food that nourishes the body and soul. </p>
-                </div>
+            <div class = "icon-text">
+                <h3>Preparation</h3>
+                <h3>The Finer Details</h3>
+                <br>
+                <p class="whytext">We abide by a strict hygiene code of practice at all times.
+                    Every ingredient is carefully examined, then kept in their respective safe
+                    temperature storages.
+                    We look into just about everything to keep things fresh. There’s no
+                    compromise in that.</p>
             </div>
-            <div class="icon-section3">
-                <div class="icon">
-                    <img src="Projectimages/meal3.png" width="200px" height="130px">
-                    <br>
-                    <br>
-                    <br>
-                </div>
-                <div>
-                    <h2>Technology</h2>
-                    <h2>Food and science</h2>
-                    <br>
-                    <br>
-                    <p style="padding: 30px">We strive for gastronomic excellence, made possible powered by the industry’s leading technology using the High Pressure Processing (HPP) technique. The delicate relationship between food and science co-exists to serve better, healthier, and longer-lasting food. Safety first, we only serve food we love.</p>
-                </div>
+        </div>
+        <div class="icon-section">
+            <div class="icon">
+                <img src="Projectimages/meal2.png" width="160px" height="160px">
+                <br>
             </div>
-            <div class="icon-section4">
-                <div class="icon">
-                    <img src="Projectimages/meal4.png" width="140px" height="240px">
-                    <br>
-                </div>
-                <div>
-                    <h2>Nutritionist</h2>
-                    <h2>Working with the best</h2>
-                    <br>
-                    <br>
-                    <p style="padding: 35px 30px">Our Olympic-certified nutritionist plays an essential role here at Happy Tingkat. They have a deep understanding of food and how it benefits our body, mood, and energy. With their expertise and our ethos in mind, we aim to bring you an easy solution towards healthier eating and living.</p>
-                </div>
+            <div class = "icon-text">
+                <h3>Ingredients</h3>
+                <h3>Quality is our thing</h3>
+                <br>
+                <p class="whytext">It’s about passion and having an eye for fresh picks.
+                    Our dedicated team of chefs source and prep your meals responsibly with as
+                    little waste as possible.
+                    We believe in honest ingredients and turning them into food that nourishes
+                    the body and soul. </p>
+            </div>
+        </div>
+        <div class="icon-section">
+            <div class="icon">
+                <img src="Projectimages/meal3.png" width="150px" height="150px">
+                <br>
+                <br>
+            </div>
+            <div class = "icon-text">
+                <h3>Technology</h3>
+                <h3>Food and science</h3>
+                <br>
+                <p class="whytext">We strive for gastronomic excellence, made possible
+                    powered by the
+                    industry’s leading technology using the High Pressure Processing (HPP)
+                    technique.
+                    The delicate relationship between food and science co-exists to serve better,
+                    healthier,
+                    and longer-lasting food. Safety first, we only serve food we love.</p>
+            </div>
+        </div>
+        <div class="icon-section">
+            <div class="icon">
+                <img src="Projectimages/meal4.png" width="160px" height="160px">
+                <br>
+                <br>
+            </div>
+            <div class = "icon-text">
+                <h3>Nutritionist</h3>
+                <h3>Working with the best</h3>
+                <br>
+                <p class="whytext">Our Olympic-certified nutritionist plays an essential role
+                    here at Happy Tingkat.
+                    They have a deep understanding of food and how it benefits our body, mood,
+                    and energy.
+                    With their expertise and our ethos in mind, we aim to bring you an easy
+                    solution towards
+                    healthier eating and living.</p>
             </div>
         </div>
     </div>
