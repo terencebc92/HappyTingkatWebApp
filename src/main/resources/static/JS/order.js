@@ -305,3 +305,7 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl, {boundary: document.body}) // or document.querySelector('#boundary')
 })
+
+// Local storage feature
+let selectedPackage = window.localStorage.getItem("selectedPackage");
+document.getElementById('mealPackage').value = selectedPackage;

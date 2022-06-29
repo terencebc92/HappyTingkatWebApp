@@ -83,6 +83,7 @@ class PackagesController {
         console.log(this.allPackageItems);
         this.allPackageItems.forEach ((item) => {
           let infoBtnId = item.id;
+          let packageValue = parseInt(item.name.substring(0,2));
           let htmlPackageCard =
               `
               <div class="ms-2 me-2">
@@ -99,7 +100,7 @@ class PackagesController {
                         <p class="card-text">${item.type}</p>
                       </div>
                       <div id="orderButton">
-                        <a href="https://happytingkat.herokuapp.com/order" class="btn btn-lg btn-success" style="font-weight: bold;">$${item.price}</a>
+                        <a href="https://happytingkat.herokuapp.com/order" value=${packageValue} class="btn btn-lg btn-success" style="font-weight: bold;">$${item.price}</a>
                       </div>
                     </div>
                   </div>
@@ -115,7 +116,10 @@ class PackagesController {
           else if (item.cuisine == "Halal") {
             showPackageHalal += htmlPackageCard
           }
-        });
+
+
+
+        }); // End of forEach
 
         // Addition of HTML script to Package Section:
         // - Chinese Packages:
@@ -124,12 +128,16 @@ class PackagesController {
         // - Halal Packages:
         document.querySelectorAll(".owl-carousel")[1].innerHTML = showPackageHalal;
 
+
+
         // Add eventListener for each modal 'Info' button:
         this.allPackageItems.forEach ((item) => {
           let infoBtnId = item.id
           document.getElementById(infoBtnId).addEventListener("click", function() {
             displayPackageDetail(item)
           });
+          document.querySelector('#orderButton>a').addEventListener("click", storeValue);
+
         });
 
     } // End of displayProduct method definition
@@ -145,3 +153,7 @@ function displayPackageDetail(item) {
     document.querySelector(".todaysMenu").setAttribute("id", item.id);
 }
 
+function storeValue(event) {
+    const retrievedValue = event.target.value
+    window.localStorage.setItem("selectedPackage", retrievedValue);
+}
