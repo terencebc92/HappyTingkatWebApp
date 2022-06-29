@@ -19,24 +19,24 @@ h5 { font-size: 20px; }
 
 /* Navigation Bar Style */
 nav {
-  width: 100%;
+    width: 100%;
 }
 
 .navbar .nav-link {
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding-left: 1rem !important; /*1rem is 16 px, impt makes it take effect over other styles*/
-  padding-right: 1rem !important;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 1rem !important; /*1rem is 16 px, impt makes it take effect over other styles*/
+    padding-right: 1rem !important;
 }
 
 .navbar .nav-link.active {
-  background-color: #38891b;
-  border-radius: 5px;
+    background-color: #38891b;
+    border-radius: 5px;
 }
 
 .nav-item a {
-  color: black;
+     color: black;
 }
 
 #intro {
@@ -49,8 +49,6 @@ nav {
     position: relative;
     text-align: center;
     color: white;
-
-
 }
 
 /* intro section */
@@ -87,50 +85,79 @@ nav {
     font-weight: 600;
 }
 
+ /*Video section*/
+
+#videotitle {
+    color: #699e3c;
+    font-family:Monserratt;
+    font-size: 80px;
+}
+
+.videotext {
+    color: #699e3c;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.button-video {
+    width: 100px;
+    color: white;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #699e3c;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
 
 .video {
-
-    width: 100%;
+    width: 450px;
     height: auto;
-    padding: 55px;
-
- }
-
-
-
-  /* why order with us */
-
-
-.header {
-    text-align: center;
-    margin: 50px;
+    border: 0;
+    border-radius: 20px;
 }
 
+.aboutus-block2 {
+    justify-content: center;
+    align-items: center;
+}
 
-.why1 {
-    display: flex;
+/* why order with us */
+
+#why-order {
+    background-color: #c7ab59;
+    width:100%;
+    height: auto;
+    padding: 80px 40px 50px 40px;
+}
+
+.why {
+    display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
 }
 
-.why1 > div {
-
-    flex: 50%;
-    margin-bottom: 10px;
-
+.why > div {
+    flex: 50%;  /* 2 itmes in a row */
+    margin-bottom: 30px;
+    align-items: center;       /* vertical*/
+    justify-content: center;
 }
 
-.icon-section1 {
-
-    margin-top: 25px;
-
+p.whytext {  /*Text style*/
+    text-align: justify;
+    width:300px;
 }
 
-.icon-section4 {
+.icon-section {
+    display: flex;
+    align-items: center;
+}
 
-    margin-top: -70px;
-
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
 }
 
 
@@ -233,64 +260,32 @@ nav {
 }
 
 
-
-
-
-
-
-
 @media only screen and (max-width: 768px) {
 
+    .intro-content {
+         width: 100%;
+         height: auto;
+        }
+        .contact {
+            display: none;
+        }
+        .card {
+            margin-bottom: 40px;
+        }
 
-    .contact {
-        display: none;
-    }
-
-    .card {
-        margin-left: 3rem;
-        margin-right: 3rem;
-        margin-bottom: 40px;
-    }
-
-    .main-text {
-        padding: 0rem 2rem;
-        margin-bottom: -5rem;
-    }
-
-    .main-items {
-        transform: translateY(-63%);
-    }
-
-
-
-  /* Why order with us */
-
-
-  .header {
-    text-align: center;
-    margin: 100px;
-}
-
-
-.why1 {
+    /* Why order with us */
+    .icon-text {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 40px;
-
-}
-
-.icon-section {
-    display:flex;
     flex-direction: column;
-    margin: 20px;
-    width: 90%;
+    margin-left: 40px;
+    }
 
-}
-
-
-
-
+    .icon-section {
+        display:flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
 
 }
