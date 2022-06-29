@@ -309,3 +309,4 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 // Local storage feature
 let selectedPackage = window.localStorage.getItem("selectedPackage");
 document.getElementById('mealPackage').value = selectedPackage;
+calculatePrice();
