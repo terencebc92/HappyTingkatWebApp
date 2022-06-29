@@ -154,6 +154,6 @@ function displayPackageDetail(item) {
 }
 
 function storeValue(event) {
-    const retrievedValue = event.target.value
+    const retrievedValue = event.target.getAttributeNode("value").value;
     window.localStorage.setItem("selectedPackage", retrievedValue);
 }
