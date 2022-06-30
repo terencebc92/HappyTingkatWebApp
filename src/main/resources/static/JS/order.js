@@ -222,12 +222,6 @@ priceMealPackage, priceLunch, priceDinner, priceFourDish, numPax, numBrownRice, 
 const priceMealPackage10 = 100;
 const priceMealPackage20 = 180;
 const priceMealPackage30 = 270;
-//const priceMealPackage10and3 = 100;
-//const priceMealPackage20and3 = 180;
-//const priceMealPackage30and3 = 270;
-//const priceMealPackage10and4 = 130;
-//const priceMealPackage20and4 = 240;
-//const priceMealPackage30and4 = 330;
 const priceThreeDish = 0; // 3-dish is the default choice, therefore no extra charge
 const priceFourDish = 30; // Extra charge of $30 for 4-dish
 const priceBrownRice = 1.5;
@@ -285,6 +279,7 @@ function applyNumDishesPrice() {
   if (numDishes.value == 3) {
     priceDishes = priceThreeDish;
   }
+  // Calculating increment from base prices of 3 dishes for 10/20/30 days package:
   if (numDishes.value == 4) {
     priceDishes = priceFourDish;
     if (mealPackage.value == 20 || mealPackage.value == 30) {
@@ -311,7 +306,7 @@ function getBrownRiceValue() {
 };
 inputBrownRice.addEventListener("input", getBrownRiceValue);
 
-// Discount Rate
+// 7) Discount Rate
 const numPaxForDiscount = document.querySelector("#numPax");
 function getDiscount() {
     if(numPaxForDiscount.value == 2 && numDishes.value == 3) {
