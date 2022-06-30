@@ -90,6 +90,12 @@ outline: 0;
 box-shadow: 0 0 0 0.1rem var(--green);
 }
 
+.page-link:focus {
+    border-color: var(--green);
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
 .form__select__entries:hover,
 .form-select:hover,
 .form__search:hover,
@@ -180,6 +186,20 @@ tbody tr:last-of-type {
     font-size: 1.2rem;
 }
 
+/* DataTable Style */
+.page-item.active .page-link{
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.page-link{
+    color: var(--brown);
+}
+
+.page-link:hover{
+    color: var(--green);
+}
+
 /* Footer Style */
 #main-footer {
     background: #ffffff;
@@ -190,6 +210,11 @@ tbody tr:last-of-type {
     margin-right: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.footer__content__wrap {
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 
