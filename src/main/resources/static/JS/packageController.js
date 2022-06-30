@@ -101,7 +101,7 @@ class PackagesController {
                         <p class="card-text">${item.type}</p>
                       </div>
                       <div id="orderButton">
-                        <a href="http://localhost:8090/order" value=${packageValue} class="btn btn-lg btn-success" style="font-weight: bold;">$${item.price}</a>
+                        <a href="https://happytingkat.herokuapp.com/order" value=${packageValue} class="btn btn-lg btn-success" style="font-weight: bold;">$${item.price}</a>
                       </div>
                     </div>
                   </div>
