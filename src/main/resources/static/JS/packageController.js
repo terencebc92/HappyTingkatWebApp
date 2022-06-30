@@ -84,6 +84,7 @@ class PackagesController {
         this.allPackageItems.forEach ((item) => {
           let infoBtnId = item.id;
           let packageValue = parseInt(item.name.substring(0,2));
+          let packageType = parseInt(item.type.substring(0,1));
           let htmlPackageCard =
               `
               <div class="ms-2 me-2">

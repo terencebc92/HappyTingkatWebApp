@@ -77,14 +77,3 @@ $("#collapseAllH").click( function() {
         buttonAll.innerHTML = 'Expand all'
     }
 });
-
-// Saving the form input items based on specific Package in local storage:
-// Variation 1 => 10 Days Package - 3 dishes:
-function createPackageData1() {
-    // Setting the values in local storage:
-    var mealPackage = document.getElementById("mealPackage").value;
-    var numDishes = document.getElementById("numDishes").value;
-
-    localStorage.setItem(mealPackage, "10");
-    localStorage.setItem(numDishes, "3");
-}
