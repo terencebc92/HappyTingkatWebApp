@@ -352,6 +352,11 @@ h1 {
     background: none;
 }
 
+.modal-body #packageImage {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 /* Footer Style */
 #main-footer {
     background: #ffffff;
@@ -510,5 +515,30 @@ h1 {
 
     .menu-block2 {
         margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+
+    .masthead {
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: -105px;
+    }
+
+    .intro-wording {
+        padding-bottom: 7rem;
+    }
+
+    .discount-section h1, .discount-section span {
+        font-size: 22px;
+    }
+
+    .discount-section {
+        font-size: 0.80rem;
+    }
+
+    #menuHeaderDesc {
+        margin: 10px 35px;
     }
 }
