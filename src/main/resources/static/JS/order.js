@@ -220,15 +220,22 @@ priceMealPackage, priceLunch, priceDinner, priceFourDish, numPax, numBrownRice, 
 
 // CONSTANT VARIABLES - Change as needed
 const priceMealPackage10 = 100;
-const priceMealPackage20 = 190;
-const priceMealPackage30 = 280;
+const priceMealPackage20 = 180;
+const priceMealPackage30 = 270;
+//const priceMealPackage10and3 = 100;
+//const priceMealPackage20and3 = 180;
+//const priceMealPackage30and3 = 270;
+//const priceMealPackage10and4 = 130;
+//const priceMealPackage20and4 = 240;
+//const priceMealPackage30and4 = 330;
 const priceThreeDish = 0; // 3-dish is the default choice, therefore no extra charge
-const priceFourDish = 2; // Extra charge of $2 for 4-dish
+const priceFourDish = 30; // Extra charge of $30 for 4-dish
 const priceBrownRice = 1.5;
 const priceWhiteRice = 1;
 
 // MUTABLE VARIABLES
 let priceMealPackageSelection = priceMealPackage10; // default value
+let discount = 0 // default
 let isLunch = 0; // toggled using handleChecked function
 let isDinner = 0; // toggled using handleChecked function
 
@@ -245,7 +252,8 @@ function calculatePrice() {
     numWhiteRice * priceWhiteRice +
     numBrownRice * priceBrownRice) *
     (isLunch == 0 && isDinner == 0 ? 1 : isLunch + isDinner) * // Prevents the price from going to zero when user unchecks both boxes
-    numPax;
+    numPax *
+    (1 - discount);
   totalPrice = totalPrice.toFixed(2); // Convert total price to 2 decimal places
   displayPrice.innerHTML = `Total price: $${totalPrice}` // Update the DOM element with the total price
   return totalPrice;
@@ -253,7 +261,7 @@ function calculatePrice() {
 
 
 // EVENT LISTENERS - Each event listener will update the price using the calculatePrice() function
-// 1) Meal package price
+// 1) Meal package price (includes the no. of dishes in each specific package price)
 const mealPackage = document.querySelector("#mealPackage");
 function applyMealPackagePrice() {
   if (mealPackage.value == 10) {
@@ -263,6 +271,7 @@ function applyMealPackagePrice() {
   } else {
     priceMealPackageSelection = priceMealPackage30;
   }
+  applyNumDishesPrice()
   calculatePrice();
 }
 mealPackage.addEventListener("input", applyMealPackagePrice);
@@ -278,6 +287,9 @@ function applyNumDishesPrice() {
   }
   if (numDishes.value == 4) {
     priceDishes = priceFourDish;
+    if (mealPackage.value == 20 || mealPackage.value == 30) {
+        priceDishes = priceFourDish * 2;
+    }
   }
   calculatePrice();
 }
@@ -299,6 +311,21 @@ function getBrownRiceValue() {
 };
 inputBrownRice.addEventListener("input", getBrownRiceValue);
 
+// Discount Rate
+const numPaxForDiscount = document.querySelector("#numPax");
+function getDiscount() {
+    if(numPaxForDiscount.value == 2 && numDishes.value == 3) {
+        discount = 0.05;
+    } else if ((numPaxForDiscount.value == 3 && numDishes.value == 3) || (numPaxForDiscount.value == 2 && numDishes.value == 4)) {
+        discount = 0.07;
+    } else if (numPaxForDiscount.value == 3 && numDishes.value == 4) {
+        discount = 0.10;
+    } else {
+        discount = 0;
+    }
+    calculatePrice();
+}
+numPaxForDiscount.addEventListener("input", getDiscount);
 
 //Tooltips
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))

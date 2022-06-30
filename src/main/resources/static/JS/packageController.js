@@ -7,8 +7,8 @@ class PackagesController {
         this.domainURL_Prod = "https://happytingkat.herokuapp.com/";
 
         // Change this to _Prod/_Dev depending on what you're using
-//        this.allPackageAPI = this.domainURL_Dev + "package/all"
-        this.allPackageAPI = this.domainURL_Prod + "package/all"
+        this.allPackageAPI = this.domainURL_Dev + "package/all"
+//        this.allPackageAPI = this.domainURL_Prod + "package/all"
 
         this.allPackageItems = [];
     }
@@ -84,6 +84,7 @@ class PackagesController {
         this.allPackageItems.forEach ((item) => {
           let infoBtnId = item.id;
           let packageValue = parseInt(item.name.substring(0,2));
+          let packageType = parseInt(item.type.substring(0,1));
           let htmlPackageCard =
               `
               <div class="ms-2 me-2">
@@ -100,7 +101,7 @@ class PackagesController {
                         <p class="card-text">${item.type}</p>
                       </div>
                       <div id="orderButton">
-                        <a href="https://happytingkat.herokuapp.com/order" value=${packageValue} class="btn btn-lg btn-success" style="font-weight: bold;">$${item.price}</a>
+                        <a href="http://localhost:8090/order" value=${packageValue} class="btn btn-lg btn-success" style="font-weight: bold;">$${item.price}</a>
                       </div>
                     </div>
                   </div>
