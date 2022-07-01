@@ -51,7 +51,14 @@ class PackagesController {
                                     dots: false,
                                     nav: true,
                                     animateIn: 'flipInY',
-                                    animateOut: 'zoomOutDown'
+                                    animateOut: 'zoomOutDown',
+                                },
+                                388: {
+                                    items: 1,
+                                    dots: false,
+                                    nav: true,
+                                    animateIn: 'flipInY',
+                                    animateOut: 'zoomOutDown',
                                 },
                                 768: {
                                     items: 1,

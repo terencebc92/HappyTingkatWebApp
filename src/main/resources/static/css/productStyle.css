@@ -352,6 +352,11 @@ h1 {
     background: none;
 }
 
+.modal-body #packageImage {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 /* Footer Style */
 #main-footer {
     background: #ffffff;
@@ -510,5 +515,82 @@ h1 {
 
     .menu-block2 {
         margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+
+    .masthead {
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: -105px;
+    }
+
+    .intro-wording {
+        padding-bottom: 7rem;
+    }
+
+    .discount-section h1, .discount-section span {
+        font-size: 22px;
+    }
+
+    .discount-section {
+        font-size: 0.80rem;
+    }
+
+    #menuHeaderDesc {
+        margin: 10px 35px;
+    }
+}
+
+@media only screen and (max-width: 388px) {
+
+    .masthead {
+        background-size: cover;
+        margin-bottom: 0px;
+    }
+
+    .intro-wording {
+        padding-bottom: 0rem;
+    }
+
+    .product-section .card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .owl-next {
+        transform: translateX(55%) translateY(40%);
+        font-size: 0.7rem;
+    }
+
+    .owl-prev {
+        transform: translateX(-55%) translateY(40%);
+        font-size:  0.7rem;
+    }
+
+    .card-title, .card-text {
+        font-size: 0.8rem;
+    }
+
+    .card-text {
+        padding-bottom: 10px;
+    }
+
+    .btn-group-lg>.btn, .btn-lg {
+        padding: 0.3rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .discount-section {
+        font-size: 0.70rem;
+    }
+
+    .catering-menu h3 {
+        font-size: 0.95rem;
+    }
+
+    .chinese-header btn, .halal-header btn {
+        font-size: 0.9rem;
     }
 }
